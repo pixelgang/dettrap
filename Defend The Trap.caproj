@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Defend The Trap</name>
+    <description>Defend the Turf.</description>
+    <version>1.0</version>
+    <author>Pixel Gang Studios</author>
+    <author-email>support@pixelgangstudios.com</author-email>
+    <author-website>http://www.pixelgangstudios.com</author-website>
+    <app-id>com.tranapps.dtt</app-id>
+    <unique-id>2m2oqhlgof90t</unique-id>
+    <saved-with-version>26500</saved-with-version>
+    <used-plugins>
+        <plugin author="Chadori_RebornXD" id="CV_MobileMasterIAP" version="1">Mobile Master IAP</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>480</width>
+        <height>320</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Orientations">Landscape</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="buildings" sid="336086572614140">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="194085262953945" speed="5">
+                    <frame duration="1" hotspotX="0.497849" hotspotY="0.867395" original-source="C:\Users\Gerrell\Desktop\Defend the trap\levels\level_main.png">
+                        <collision-poly>
+                            <point x="0.210753" y="0.5117" />
+                            <point x="0.497849" y="0.174727" />
+                            <point x="0.867473" y="0.0327613" />
+                            <point x="0.998118" y="0.867395" />
+                            <point x="0.739785" y="0.960998" />
+                            <point x="0.255914" y="0.960998" />
+                            <point x="0.00349462" y="0.867395" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="foreground" sid="486406534575955">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="819849099353680" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.923559" original-source="C:\Users\Gerrell\Desktop\Defend the trap\levels\level_mid.png">
+                        <collision-poly>
+                            <point x="0.17595" y="0.41604" />
+                            <point x="0.903956" y="0.0313283" />
+                            <point x="0.99974" y="0.923559" />
+                            <point x="0.734253" y="0.998747" />
+                            <point x="0.265747" y="0.998747" />
+                            <point x="0.000260281" y="0.923559" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="background" sid="384414378476160">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="870649058172159" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.999076" original-source="C:\Users\Gerrell\Desktop\Defend the trap\levels\level_back.png">
+                        <collision-poly>
+                            <point x="0.000260281" y="0.000924214" />
+                            <point x="0.99974" y="0.000924214" />
+                            <point x="0.718636" y="0.999076" />
+                            <point x="0.281364" y="0.999076" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="street" sid="565612479876147">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="181200978237083" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.50303" original-source="C:\Users\Gerrell\Desktop\Defend the trap\levels\level_street.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="sub" sid="511787259978821">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="825073871324965" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Gerrell\Desktop\Defend the trap\sub level\MainFiles\LaboratoryTiles\LaboratoryTiles_02.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite6" sid="789082439136440">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="884103230819125" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Gerrell\Desktop\Defend the trap\sub level\MainFiles\LaboratoryTiles\LaboratoryTiles_22.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MobileMasterIAP" sid="399511058172698">
+            <plugin id="CV_MobileMasterIAP" />
+        </object-type>
+        <object-type name="Sprite7" sid="874862518283100">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="183497697417659" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Gerrell\Desktop\Defend the trap\sub level\MainFiles\LaboratoryTiles\LaboratoryTiles_04.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite8" sid="406252511594450">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="698933550053755" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Gerrell\Desktop\Defend the trap\sub level\MainFiles\LaboratoryTiles\LaboratoryTiles_24.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite9" sid="227072790255453">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="971787712807242" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Gerrell\Desktop\Defend the trap\sub level\MainFiles\Objects\LaboratoryObject_0094 (85).png">
+                        <collision-poly>
+                            <point x="0.0416667" y="0.0454545" />
+                            <point x="0.5" y="0" />
+                            <point x="0.958333" y="0.0454545" />
+                            <point x="1" y="0.5" />
+                            <point x="0.958333" y="0.954545" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0416667" y="0.954545" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite10" sid="963564254366998">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="683579494644898" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Gerrell\Desktop\Defend the trap\sub level\MainFiles\Objects\LaboratoryObject_0094 (96).png">
+                        <collision-poly>
+                            <point x="0.0104167" y="0.0208333" />
+                            <point x="0.5" y="0" />
+                            <point x="0.989583" y="0.0208333" />
+                            <point x="0.989583" y="0.979167" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0104167" y="0.979167" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite11" sid="277558154281341">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="936835558387727" speed="5">
+                    <frame duration="1" hotspotX="0.514286" hotspotY="0.5" original-source="C:\Users\Gerrell\Desktop\Defend the trap\sub level\MainFiles\Objects\LaboratoryObject_0094 (95).png">
+                        <collision-poly>
+                            <point x="0.0285714" y="0.025" />
+                            <point x="0.485714" y="0" />
+                            <point x="0.914286" y="0.075" />
+                            <point x="0.914286" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="solid12" sid="925180594424761">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="322213442453113">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="736520336356135" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="331925671234586">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="246511243891926" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="camera" sid="709969507655006">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="679061574283105">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="205457411267316">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="891042463561868" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="player" sid="185817139773350">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="997000229784410" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Gerrell\Desktop\Pixel Apps\Defend the Trap\Player Animations\player\walk\000.png">
+                        <collision-poly>
+                            <point x="0.375" y="0.375" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.6875" y="0.3125" />
+                            <point x="0.6875" y="0.6875" />
+                            <point x="0.5" y="0.875" />
+                            <point x="0.375" y="0.625" />
+                            <point x="0.40625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>main.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="MobileMasterIAP" uid="1154" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
