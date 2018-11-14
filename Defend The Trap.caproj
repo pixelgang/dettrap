@@ -10,10 +10,16 @@
     <unique-id>2m2oqhlgof90t</unique-id>
     <saved-with-version>26500</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Chadori_RebornXD" id="CV_MobileMasterIAP" version="1">Mobile Master IAP</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
@@ -38,7 +44,7 @@
         <prop name="Orientations">Landscape</prop>
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
-        <prop name="Preview browser">(default)</prop>
+        <prop name="Preview browser">NW.js</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -229,21 +235,136 @@
         </object-type>
         <object-type name="player" sid="185817139773350">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="975233762133257">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="997000229784410" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Gerrell\Desktop\Pixel Apps\Defend the Trap\Player Animations\player\walk\000.png">
-                        <collision-poly>
-                            <point x="0.375" y="0.375" />
-                            <point x="0.5" y="0.25" />
-                            <point x="0.6875" y="0.3125" />
-                            <point x="0.6875" y="0.6875" />
-                            <point x="0.5" y="0.875" />
-                            <point x="0.375" y="0.625" />
-                            <point x="0.40625" y="0.5" />
-                        </collision-poly>
+                <animation framecount="1" loop="0" name="idle" pingpong="0" repeatcount="1" repeatto="0" sid="997000229784410" speed="5">
+                    <frame duration="1" hotspotX="0.46875" hotspotY="1" original-source="C:\Users\Gerrell\Desktop\Pixel Apps\Defend the Trap\Project\Animations\player\stand\000.png" />
+                </animation>
+                <animation framecount="4" loop="1" name="walk" pingpong="0" repeatcount="1" repeatto="0" sid="694233560452988" speed="8">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Gerrell\Desktop\Pixel Apps\Defend the Trap\Project\Animations\player\walk\000.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Gerrell\Desktop\Pixel Apps\Defend the Trap\Project\Animations\player\walk\001.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Gerrell\Desktop\Pixel Apps\Defend the Trap\Project\Animations\player\walk\002.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Gerrell\Desktop\Pixel Apps\Defend the Trap\Project\Animations\player\walk\003.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="jump" pingpong="0" repeatcount="1" repeatto="0" sid="320249675116334" speed="8">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Gerrell\Desktop\Pixel Apps\Defend the Trap\Project\Animations\player\jump\000.png" />
+                </animation>
+                <animation framecount="3" loop="1" name="attack" pingpong="0" repeatcount="1" repeatto="0" sid="237867376100441" speed="8">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Gerrell\Desktop\Pixel Apps\Defend the Trap\Project\Animations\player\attack\000.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Gerrell\Desktop\Pixel Apps\Defend the Trap\Project\Animations\player\attack\001.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Gerrell\Desktop\Pixel Apps\Defend the Trap\Project\Animations\player\attack\002.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="fall" pingpong="0" repeatcount="1" repeatto="0" sid="648774579143256" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Gerrell\Desktop\Pixel Apps\Defend the Trap\Project\Animations\player\fall\000.png" />
+                </animation>
+                <animation framecount="2" loop="1" name="sell" pingpong="0" repeatcount="1" repeatto="0" sid="971598456460591" speed="8">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Gerrell\Desktop\Pixel Apps\Defend the Trap\Project\Animations\player\magic\000.png">
+                        <image-point name="Imagepoint 1" x="0.625" y="0.78125" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Gerrell\Desktop\Pixel Apps\Defend the Trap\Project\Animations\player\magic\001.png">
+                        <image-point name="Imagepoint 1" x="0.6875" y="0.71875" />
                     </frame>
                 </animation>
+                <animation framecount="1" loop="0" name="shoot" pingpong="0" repeatcount="1" repeatto="0" sid="766431995177799" speed="5">
+                    <frame duration="1" hotspotX="0.28125" hotspotY="1" original-source="C:\Users\Gerrell\Desktop\Pixel Apps\Defend the Trap\Project\Animations\player\archery\000.png">
+                        <image-point name="Imagepoint 1" x="0.78125" y="0.53125" />
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="hide" pingpong="0" repeatcount="1" repeatto="0" sid="981560641623434" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Gerrell\Desktop\Pixel Apps\Defend the Trap\Project\Animations\player\crouch\000.png" />
+                </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="Touch" sid="455129471198352">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="Gamepad" sid="496281592952153">
+            <plugin id="gamepad" />
+        </object-type>
+        <object-type name="Audio" sid="702241174918618">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="Browser" sid="252147233459613">
+            <plugin id="Browser" />
+        </object-type>
+        <object-type name="portal_lab" sid="542628069081628">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="687653751125716" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="portal2_lab" sid="343605627034296">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="891445363033300" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="portal3_atm" sid="481362518996021">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="375789836721947" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="portal4_apartment" sid="929378721472997">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="184239443567191" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="portal5_bar" sid="583758048551905">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="158594587899830" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="portal6_department" sid="595774561190326">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="493580074719170" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="portal7_poppy" sid="566059188194020">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="555984847725587" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="546861731665638">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="582004396332389" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="portal_labdoor" sid="456766210954802">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="988810017550557" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Keyboard" sid="717833433675576">
+            <plugin id="Keyboard" />
         </object-type>
     </object-folder>
     <families />
@@ -252,9 +373,36 @@
     </layout-folder>
     <event-folder>
         <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>char.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="MobileMasterIAP" uid="1154" />
+        <global-instance type="Touch" uid="2538">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Gamepad" uid="2539">
+            <properties>
+                <analog-deadzone>25</analog-deadzone>
+            </properties>
+        </global-instance>
+        <global-instance type="Audio" uid="2540">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+        <global-instance type="Browser" uid="2541" />
+        <global-instance type="Keyboard" uid="2552" />
     </global-instances>
     <sounds-folder />
     <music-folder />

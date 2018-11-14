@@ -14,5 +14,52 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="338703839172845">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="735518843244980" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="543721769670790" type="player">
+                    <param id="0" name="Pin to">camera</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Portal Use</comment>
+        <event-block sid="651413475049312">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="219886012692735" type="camera">
+                    <param id="0" name="Object">portal_labdoor</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="886974175459080" type="System">
+                    <param id="0" name="Seconds">2.0</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="193401478188837" type="camera">
+                    <param id="0" name="Object">portal_lab</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="532835826430309">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="584874701045224" type="camera">
+                    <param id="0" name="Object">portal_lab</param>
+                </condition>
+                <condition id="2" name="Key is down" sid="718200571149958" type="Keyboard">
+                    <param id="0" name="Key">87</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="854383921135188" type="System">
+                    <param id="0" name="Seconds">2.0</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="931599836957793" type="camera">
+                    <param id="0" name="Object">portal_labdoor</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

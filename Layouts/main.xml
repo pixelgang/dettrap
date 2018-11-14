@@ -4,7 +4,7 @@
     <sid>8873350371196689</sid>
     <event-sheet>Event sheet 1</event-sheet>
     <size>
-        <width>3840</width>
+        <width>5840</width>
         <height>2160</height>
     </size>
     <margins>
@@ -18,7 +18,7 @@
             <background-color>255,255,255</background-color>
             <transparent>0</transparent>
             <parallax>
-                <x>1</x>
+                <x>0.25</x>
                 <y>1</y>
             </parallax>
             <zoom-rate>1</zoom-rate>
@@ -39,10 +39,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1920</x>
+                        <x>1966</x>
                         <y>1089</y>
                         <z>0</z>
-                        <width>3842</width>
+                        <width>4550</width>
                         <height>1082</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -59,7 +59,7 @@
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
             <parallax>
-                <x>1</x>
+                <x>0.5</x>
                 <y>1</y>
             </parallax>
             <zoom-rate>1</zoom-rate>
@@ -80,10 +80,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1920</x>
+                        <x>1943.5</x>
                         <y>1092</y>
                         <z>0</z>
-                        <width>3842</width>
+                        <width>4381</width>
                         <height>798</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -129,6 +129,28 @@
                         <depth>0</depth>
                         <hotspotX>0.497849464</hotspotX>
                         <hotspotY>0.867394686</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Sprite2" uid="2550">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>4581</x>
+                        <y>959</y>
+                        <z>0</z>
+                        <width>250</width>
+                        <height>250</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -55718,6 +55740,28 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="street" uid="2549">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>5718</x>
+                        <y>1235</y>
+                        <z>0</z>
+                        <width>3840</width>
+                        <height>165</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5030303</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -55783,10 +55827,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2026</x>
+                        <x>3050.76171875</x>
                         <y>1152</y>
                         <z>0</z>
-                        <width>3683</width>
+                        <width>5723.476074219</width>
                         <height>31</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -55812,10 +55856,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>39.98815918</x>
+                        <x>68.219566345</x>
                         <y>1151.877929688</y>
                         <z>0</z>
-                        <width>188</width>
+                        <width>244.462814331</width>
                         <height>31</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -55870,8 +55914,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>3880</x>
-                        <y>1053</y>
+                        <x>5912</x>
+                        <y>1040</y>
                         <z>0</z>
                         <width>367</width>
                         <height>31</height>
@@ -55972,6 +56016,201 @@
             </instances>
             <effects />
         </layer>
+        <layer name="portals" sid="139188943208447">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="portal_lab" uid="2542">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>168.689819336</x>
+                        <y>1536.350341797</y>
+                        <z>0</z>
+                        <width>54.821517944</width>
+                        <height>82.612426758</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.25</opacity>
+                    </world>
+                </instance>
+                <instance type="portal2_lab" uid="2543">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>159.59854126</x>
+                        <y>1149.83190918</y>
+                        <z>0</z>
+                        <width>54.733123779</width>
+                        <height>102.051269531</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.25</opacity>
+                    </world>
+                </instance>
+                <instance type="portal3_atm" uid="2544">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>402.700744629</x>
+                        <y>1151.570800781</y>
+                        <z>0</z>
+                        <width>53.873901367</width>
+                        <height>113.229980469</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.25</opacity>
+                    </world>
+                </instance>
+                <instance type="portal4_apartment" uid="2545">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2859</x>
+                        <y>1095.5</y>
+                        <z>0</z>
+                        <width>110</width>
+                        <height>113</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.25</opacity>
+                    </world>
+                </instance>
+                <instance type="portal5_bar" uid="2546">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2678</x>
+                        <y>1097</y>
+                        <z>0</z>
+                        <width>56</width>
+                        <height>108</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.25</opacity>
+                    </world>
+                </instance>
+                <instance type="portal6_department" uid="2547">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2231.5</x>
+                        <y>1085</y>
+                        <z>0</z>
+                        <width>99</width>
+                        <height>128</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.25</opacity>
+                    </world>
+                </instance>
+                <instance type="portal7_poppy" uid="2548">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1370.5</x>
+                        <y>1096</y>
+                        <z>0</z>
+                        <width>63</width>
+                        <height>106</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.25</opacity>
+                    </world>
+                </instance>
+                <instance type="portal_labdoor" uid="2551">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>159.246444702</x>
+                        <y>1099.063598633</y>
+                        <z>0</z>
+                        <width>54.822052002</width>
+                        <height>102.647766113</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.5</opacity>
+                    </world>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
         <layer name="player" sid="858546143111387">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
@@ -56038,17 +56277,20 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>36</x>
-                        <y>1113</y>
+                        <y>1149</y>
                         <z>0</z>
                         <width>71.203933716</width>
                         <height>71.203933716</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.46875</hotspotX>
+                        <hotspotY>1</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
