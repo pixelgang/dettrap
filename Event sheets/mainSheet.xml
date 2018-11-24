@@ -508,5 +508,192 @@
                 </action>
             </actions>
         </event-block>
+        <event-group description="" sid="571905180707872" title="Enemy AI">
+            <sub-events>
+                <event-block sid="474350183112634">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="357097570791643" type="enemy" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="308837054275363" type="enemy">
+                            <param id="0" name="Instance variable">direction</param>
+                            <param id="1" name="Value">choose(-1,1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="208239521352846">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="514410929213794" type="enemy">
+                            <param id="0" name="Instance variable">direction</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="128499185652319" type="enemy">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="552534670292982" type="enemy">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="219969078974526">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="406737848768909" type="enemy">
+                            <param id="0" name="Instance variable">direction</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">-1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="162976865466012" type="enemy">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="822226420289323" type="enemy">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="440904642160748">
+                    <conditions>
+                        <condition behavior="Platform" id="10" name="Is by wall" sid="681718237106458" type="enemy">
+                            <param id="0" name="Side">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="292023874987264" type="enemy">
+                            <param id="0" name="Instance variable">direction</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="872496281162034">
+                    <conditions>
+                        <condition behavior="Platform" id="10" name="Is by wall" sid="243968546258606" type="enemy">
+                            <param id="0" name="Side">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="433166122668876" type="enemy">
+                            <param id="0" name="Instance variable">direction</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="370411893646135" title="Enemy Health">
+            <sub-events>
+                <event-block sid="458629731242228">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="999717606441574" type="System">
+                            <param id="0" name="Interval (seconds)">6.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="635377860520010" type="System">
+                            <param id="0" name="Object to create">enemy</param>
+                            <param id="1" name="Layer">8</param>
+                            <param id="2" name="X">1676.601</param>
+                            <param id="3" name="Y">1125.532</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="300418720993725">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="333033943639509" type="System">
+                            <param id="0" name="Object">enemy</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="281649646900805">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="814065823606517" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="774477735968626" type="System">
+                                    <param id="0" name="Object to create">enemyHealthbar</param>
+                                    <param id="1" name="Layer">8</param>
+                                    <param id="2" name="X">enemy.X</param>
+                                    <param id="3" name="Y">enemy.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="801935494897570">
+                            <conditions>
+                                <condition id="-5" name="Compare width" sid="361258146409743" type="enemyHealthbar">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Width">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="996989348313537" type="enemyHealthbar" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="530654625296785">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="873588702478401" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="728973101251589" type="enemyHealthbar">
+                            <param id="0" name="X">enemy.X -15</param>
+                            <param id="1" name="Y">enemy.Y -55</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="496146612343445" type="enemyHealthbar">
+                            <param id="0" name="Width">enemy.enemyHealth</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="244415069878560">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="593633345110610" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">enemy</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="613205900056597" type="enemy">
+                    <param id="0" name="Instance variable">enemyHealth</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="634201165391526">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="777101390975816" type="gunBullet">
+                    <param id="0" name="Object">enemy</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="976466118446044" type="enemy">
+                    <param id="0" name="Instance variable">enemyHealth</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+                <action id="-9" name="Destroy" sid="658319374394636" type="gunBullet" />
+                <action id="0" name="Call function" sid="361088233660595" type="Function">
+                    <param id="0" name="Name">&quot;screenShake&quot;</param>
+                    <param id="1" name="Parameter {n}">4{###}0.2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="810183180240815">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="419463963965977" type="enemy">
+                    <param id="0" name="Instance variable">enemyHealth</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="951556545180790" type="enemy" />
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
