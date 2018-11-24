@@ -10,9 +10,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">main</layout>
-        <event-sheet active="1" order="1">Event sheet 1</event-sheet>
-        <event-sheet order="2">char</event-sheet>
+        <layout active="1" order="1">main</layout>
+        <event-sheet order="0">mainSheet</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -40,9 +39,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Sprite9/" />
         <folder expanded="1" path="animation-folder/Sprite10/" />
         <folder expanded="1" path="animation-folder/Sprite11/" />
-        <folder expanded="1" path="animation-folder/solid12/" />
+        <folder expanded="1" path="animation-folder/solidTexture/" />
         <folder expanded="1" path="animation-folder/Sprite/" />
-        <folder expanded="1" path="animation-folder/camera/" />
         <folder expanded="1" path="animation-folder/player/" />
         <folder expanded="1" path="animation-folder/portal_lab/" />
         <folder expanded="1" path="animation-folder/portal2_lab/" />
@@ -53,5 +51,17 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/portal7_poppy/" />
         <folder expanded="1" path="animation-folder/Sprite2/" />
         <folder expanded="1" path="animation-folder/portal_labdoor/" />
+        <folder expanded="1" path="animation-folder/Sprite3/" />
+        <folder expanded="1" path="animation-folder/screenFade/" />
+        <folder expanded="1" path="animation-folder/weedout/" />
+        <folder expanded="1" path="animation-folder/screenFadein/" />
+        <folder expanded="1" path="animation-folder/objBullet/" />
+        <folder expanded="1" path="animation-folder/gunPistal/" />
+        <folder expanded="1" path="animation-folder/gunLauncher/" />
+        <folder expanded="1" path="animation-folder/gunBullet/" />
+        <folder expanded="1" path="animation-folder/gunRocket/" />
+        <folder expanded="1" path="animation-folder/shells/" />
+        <folder expanded="1" path="animation-folder/weedout2/" />
+        <folder expanded="1" path="animation-folder/muzzleFlash/" />
     </folders-expanded>
 </c2uistate>
