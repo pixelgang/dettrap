@@ -10,8 +10,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="1">main</layout>
-        <event-sheet active="1" order="0">mainSheet</event-sheet>
+        <layout active="1" order="1">main</layout>
+        <event-sheet order="0">mainSheet</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -22,6 +22,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <families-expanded root="1" />
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
+        <folder expanded="0" path="object-folder/plugins/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="1" path="file-folder/" />
@@ -65,5 +66,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/muzzleFlash/" />
         <folder expanded="1" path="animation-folder/enemy/" />
         <folder expanded="1" path="animation-folder/enemyHealthbar/" />
+        <folder expanded="1" path="animation-folder/npcTalkingpoint/" />
+        <folder expanded="1" path="animation-folder/npcBuyers/" />
+        <folder expanded="1" path="animation-folder/zoomOut/" />
     </folders-expanded>
 </c2uistate>

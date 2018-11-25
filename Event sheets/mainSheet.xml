@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>mainSheet</name>
     <events>
+        <variable constant="0" name="zoomgrave" sid="695806996537320" static="0" type="number">0</variable>
+        <variable constant="0" name="Zoom" sid="887632453366085" static="0" type="number">0</variable>
         <event-block sid="671727257421552">
             <conditions>
                 <condition id="-1" name="Every tick" sid="874918010645424" type="System" />
@@ -494,20 +496,20 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="635328961817630">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="652398117846896" type="shells">
+                            <param id="0" name="Object">solidTexture</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="21" name="Set immovable" sid="823415412163493" type="shells">
+                            <param id="0" name="Setting">1</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="635328961817630">
-            <conditions>
-                <condition id="1" name="Is overlapping another object" sid="652398117846896" type="shells">
-                    <param id="0" name="Object">solidTexture</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Physics" id="21" name="Set immovable" sid="823415412163493" type="shells">
-                    <param id="0" name="Setting">1</param>
-                </action>
-            </actions>
-        </event-block>
         <event-group description="" sid="571905180707872" title="Enemy AI">
             <sub-events>
                 <event-block sid="474350183112634">
@@ -583,12 +585,12 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="370411893646135" title="Enemy Health">
+        <event-group description="" sid="370411893646135" title="Enemy AI Tech">
             <sub-events>
                 <event-block sid="458629731242228">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="999717606441574" type="System">
-                            <param id="0" name="Interval (seconds)">6.0</param>
+                            <param id="0" name="Interval (seconds)">120</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -648,52 +650,355 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="244415069878560">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="593633345110610" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">enemy</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="613205900056597" type="enemy">
+                            <param id="0" name="Instance variable">enemyHealth</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="634201165391526">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="777101390975816" type="gunBullet">
+                            <param id="0" name="Object">enemy</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="976466118446044" type="enemy">
+                            <param id="0" name="Instance variable">enemyHealth</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="658319374394636" type="gunBullet" />
+                        <action id="0" name="Call function" sid="361088233660595" type="Function">
+                            <param id="0" name="Name">&quot;screenShake&quot;</param>
+                            <param id="1" name="Parameter {n}">4{###}0.2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="810183180240815">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="419463963965977" type="enemy">
+                            <param id="0" name="Instance variable">enemyHealth</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="951556545180790" type="enemy" />
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="244415069878560">
-            <conditions>
-                <condition id="6" name="On object clicked" sid="593633345110610" type="Mouse">
-                    <param id="0" name="Mouse button">0</param>
-                    <param id="1" name="Click type">0</param>
-                    <param id="2" name="Object clicked">enemy</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-12" name="Subtract from" sid="613205900056597" type="enemy">
-                    <param id="0" name="Instance variable">enemyHealth</param>
-                    <param id="1" name="Value">10</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="634201165391526">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="777101390975816" type="gunBullet">
-                    <param id="0" name="Object">enemy</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-12" name="Subtract from" sid="976466118446044" type="enemy">
-                    <param id="0" name="Instance variable">enemyHealth</param>
-                    <param id="1" name="Value">10</param>
-                </action>
-                <action id="-9" name="Destroy" sid="658319374394636" type="gunBullet" />
-                <action id="0" name="Call function" sid="361088233660595" type="Function">
-                    <param id="0" name="Name">&quot;screenShake&quot;</param>
-                    <param id="1" name="Parameter {n}">4{###}0.2</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="810183180240815">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="419463963965977" type="enemy">
-                    <param id="0" name="Instance variable">enemyHealth</param>
-                    <param id="1" name="Comparison">3</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="951556545180790" type="enemy" />
-            </actions>
-        </event-block>
+        <event-group description="" sid="670933283414200" title="Zoom in Effect">
+            <sub-events>
+                <event-block sid="648949346434701">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="371445486903984" type="player">
+                            <param id="0" name="Object">npcTalkingpoint</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="887165199994969" type="System">
+                            <param id="0" name="Variable">Zoom</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="397701722475157">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="525690093471977" type="player">
+                            <param id="0" name="Object">npcTalkingpoint</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="644424488006834" type="System">
+                            <param id="0" name="Variable">Zoom</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="573299369178906">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="518872778922335" type="System">
+                            <param id="0" name="Variable">Zoom</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-20" name="Set layout scale" sid="653979287988522" type="System">
+                            <param id="0" name="Scale">lerp(LayoutScale, 1.0, 20 * dt)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="121703862594977">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="343319670877575" type="System">
+                            <param id="0" name="Variable">Zoom</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-20" name="Set layout scale" sid="347732876514954" type="System">
+                            <param id="0" name="Scale">lerp(LayoutScale,  0.5, 5 * dt)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="529945912752832" title="Buyers AI">
+            <sub-events>
+                <event-block sid="195704942780210">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="453180984209792" type="npcBuyers" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="948926516943679" type="npcBuyers">
+                            <param id="0" name="Instance variable">direction</param>
+                            <param id="1" name="Value">choose(-1,1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="768620221374488">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="297773620169975" type="npcBuyers">
+                            <param id="0" name="Instance variable">direction</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="688172000042638" type="npcBuyers">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="154328160591937" type="npcBuyers">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="255049704404789">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="538526612052588" type="npcBuyers">
+                            <param id="0" name="Instance variable">direction</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">-1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="695057106610573" type="npcBuyers">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="108634218475312" type="npcBuyers">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="122354743866758">
+                    <conditions>
+                        <condition behavior="Platform" id="10" name="Is by wall" sid="385931137735735" type="npcBuyers">
+                            <param id="0" name="Side">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="521447307981977" type="npcBuyers">
+                            <param id="0" name="Instance variable">direction</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="524562566821514">
+                    <conditions>
+                        <condition behavior="Platform" id="10" name="Is by wall" sid="468225736559410" type="npcBuyers">
+                            <param id="0" name="Side">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="351358758533009" type="npcBuyers">
+                            <param id="0" name="Instance variable">direction</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="725705454452247" title="Buyers AI Tech">
+            <sub-events>
+                <event-block sid="282430117573265">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="404622887702058" type="System">
+                            <param id="0" name="Interval (seconds)">55.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="227060988098534" type="System">
+                            <param id="0" name="Object to create">npcBuyers</param>
+                            <param id="1" name="Layer">8</param>
+                            <param id="2" name="X">1676.601</param>
+                            <param id="3" name="Y">1125.532</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="120875268253553">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="852073412111028" type="System">
+                            <param id="0" name="Object">npcBuyers</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="461550032978182">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="906295147016613" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="396169732103143" type="System">
+                                    <param id="0" name="Object to create">enemyHealthbar</param>
+                                    <param id="1" name="Layer">8</param>
+                                    <param id="2" name="X">enemy.X</param>
+                                    <param id="3" name="Y">enemy.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="593301419023197">
+                            <conditions>
+                                <condition id="-5" name="Compare width" sid="612670615920538" type="enemyHealthbar">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Width">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="210904162923905" type="enemyHealthbar" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="865381134680127">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="383910651487051" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="348848497277179" type="enemyHealthbar">
+                            <param id="0" name="X">enemy.X -15</param>
+                            <param id="1" name="Y">enemy.Y -55</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="291422047258896" type="enemyHealthbar">
+                            <param id="0" name="Width">enemy.enemyHealth</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="519380344462018">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="338291159878235" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">enemy</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="630409757378476" type="npcBuyers">
+                            <param id="0" name="Instance variable">npcHealth</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="489260376216268">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="253537413443646" type="gunBullet">
+                            <param id="0" name="Object">npcBuyers</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="564050841654445" type="npcBuyers">
+                            <param id="0" name="Instance variable">npcHealth</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="613942671295944" type="gunBullet" />
+                        <action id="0" name="Call function" sid="748243620239605" type="Function">
+                            <param id="0" name="Name">&quot;screenShake&quot;</param>
+                            <param id="1" name="Parameter {n}">4{###}0.2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="675972118086841">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="840139492738836" type="npcBuyers">
+                            <param id="0" name="Instance variable">npcHealth</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="765330453446125" type="npcBuyers" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" disabled="1" sid="991007037758453" title="Zoom in Graveyard">
+            <sub-events>
+                <event-block sid="760798999826750">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="214529515718172" type="player">
+                            <param id="0" name="Object">zoomOut</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="180329818222924" type="System">
+                            <param id="0" name="Variable">Zoom</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="787721257516938">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="681412100789914" type="player">
+                            <param id="0" name="Object">zoomOut</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="816222123018758" type="System">
+                            <param id="0" name="Variable">Zoom</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="446071525396453">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="774386323987455" type="System">
+                            <param id="0" name="Variable">zoomgrave</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-20" name="Set layout scale" sid="995839981703471" type="System">
+                            <param id="0" name="Scale">lerp(LayoutScale, 1.0, 20 * dt)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="508757960425936">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="277376917836446" type="System">
+                            <param id="0" name="Variable">zoomgrave</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-20" name="Set layout scale" sid="306048366730293" type="System">
+                            <param id="0" name="Scale">lerp(LayoutScale,  2.0, 20 * dt)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

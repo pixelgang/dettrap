@@ -59,6 +59,38 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder>
+        <object-folder name="plugins">
+            <object-type name="Audio" sid="702241174918618">
+                <plugin id="Audio" />
+            </object-type>
+            <object-type name="Browser" sid="252147233459613">
+                <plugin id="Browser" />
+            </object-type>
+            <object-type name="Function" sid="852810920679372">
+                <plugin id="Function" />
+            </object-type>
+            <object-type name="Gamepad" sid="496281592952153">
+                <plugin id="gamepad" />
+            </object-type>
+            <object-type name="Keyboard" sid="717833433675576">
+                <plugin id="Keyboard" />
+            </object-type>
+            <object-type name="MobileMasterIAP" sid="399511058172698">
+                <plugin id="CV_MobileMasterIAP" />
+            </object-type>
+            <object-type name="Mouse" sid="269081057901982">
+                <plugin id="Mouse" />
+            </object-type>
+            <object-type name="XboxLive" sid="514522282239530">
+                <plugin id="XboxLive" />
+            </object-type>
+            <object-type name="WindowsStore" sid="674967272429009">
+                <plugin id="win8" />
+            </object-type>
+            <object-type name="Touch" sid="455129471198352">
+                <plugin id="Touch" />
+            </object-type>
+        </object-folder>
         <object-type name="buildings" sid="336086572614140">
             <plugin id="Sprite" />
             <animation-folder>
@@ -132,9 +164,6 @@
                     <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Gerrell\Desktop\Defend the trap\sub level\MainFiles\LaboratoryTiles\LaboratoryTiles_22.png" />
                 </animation>
             </animation-folder>
-        </object-type>
-        <object-type name="MobileMasterIAP" sid="399511058172698">
-            <plugin id="CV_MobileMasterIAP" />
         </object-type>
         <object-type name="Sprite7" sid="874862518283100">
             <plugin id="Sprite" />
@@ -283,18 +312,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Touch" sid="455129471198352">
-            <plugin id="Touch" />
-        </object-type>
-        <object-type name="Gamepad" sid="496281592952153">
-            <plugin id="gamepad" />
-        </object-type>
-        <object-type name="Audio" sid="702241174918618">
-            <plugin id="Audio" />
-        </object-type>
-        <object-type name="Browser" sid="252147233459613">
-            <plugin id="Browser" />
-        </object-type>
         <object-type name="portal_lab" sid="542628069081628">
             <plugin id="Sprite" />
             <animation-folder>
@@ -367,9 +384,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Keyboard" sid="717833433675576">
-            <plugin id="Keyboard" />
-        </object-type>
         <object-type name="Sprite3" sid="353171239785858">
             <plugin id="Sprite" />
             <animation-folder>
@@ -385,12 +399,6 @@
                     </frame>
                 </animation>
             </animation-folder>
-        </object-type>
-        <object-type name="WindowsStore" sid="674967272429009">
-            <plugin id="win8" />
-        </object-type>
-        <object-type name="XboxLive" sid="514522282239530">
-            <plugin id="XboxLive" />
         </object-type>
         <object-type name="screenFade" sid="917210903098380">
             <plugin id="Sprite" />
@@ -565,9 +573,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Function" sid="852810920679372">
-            <plugin id="Function" />
-        </object-type>
         <object-type name="shells" sid="806952268097178">
             <plugin id="Sprite" />
             <behaviors>
@@ -629,6 +634,9 @@
                 <behavior-type name="Platform" sid="314861269307619">
                     <behavior id="Platform" />
                 </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="231768075071219">
+                    <behavior id="destroy" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="927466394610392" speed="5">
@@ -644,8 +652,52 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Mouse" sid="269081057901982">
-            <plugin id="Mouse" />
+        <object-type name="npcTalkingpoint" sid="499726348310373">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="334045377185007" speed="5">
+                    <frame duration="1" hotspotX="0.509804" hotspotY="0.509804" original-source="C:\Users\Gerrell\Desktop\Pixel Apps\Boat Rush Game\Game Art\camera-sheet0.png">
+                        <collision-poly>
+                            <point x="0.254902" y="0.254902" />
+                            <point x="0.490196" y="0.0196078" />
+                            <point x="0.72549" y="0.27451" />
+                            <point x="0.843137" y="0.490196" />
+                            <point x="0.803922" y="0.803922" />
+                            <point x="0.490196" y="0.803922" />
+                            <point x="0.156863" y="0.843137" />
+                            <point x="0.117647" y="0.490196" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="npcBuyers" sid="848582495491931">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="direction" sid="945620975239765" type="number" />
+                <instance-variable name="npcHealth" sid="555551791890322" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="193064692190612">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="550271959926659">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="227294194427739" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="zoomOut" sid="190099654452255">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="834919571526409" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />
