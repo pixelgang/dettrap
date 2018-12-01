@@ -5,6 +5,12 @@
     <events>
         <variable constant="0" name="zoomgrave" sid="695806996537320" static="0" type="number">0</variable>
         <variable constant="0" name="Zoom" sid="887632453366085" static="0" type="number">0</variable>
+        <event-block sid="592408424518251">
+            <conditions>
+                <condition id="4" name="Has gamepads" sid="684195032078097" type="Gamepad" />
+            </conditions>
+            <actions />
+        </event-block>
         <event-block sid="671727257421552">
             <conditions>
                 <condition id="-1" name="Every tick" sid="874918010645424" type="System" />
@@ -21,6 +27,23 @@
                 <action id="-3" name="Set position" sid="711663088604267" type="gunLauncher">
                     <param id="0" name="X">player.ImagePointX(&quot;gunLauncher&quot;)</param>
                     <param id="1" name="Y">player.ImagePointY(&quot;gunLauncher&quot;)</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="954078517930399" type="elevLabtrigger">
+                    <param id="0" name="Object">elevaLab</param>
+                    <param id="1" name="Image point (optional)">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="829764098745375">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="282531787429473" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="636956663495141" type="System">
+                    <param id="0" name="Object to create">storeTriggerin</param>
+                    <param id="1" name="Layer">8</param>
+                    <param id="2" name="X">1353.884</param>
+                    <param id="3" name="Y">1142.584</param>
                 </action>
             </actions>
         </event-block>
@@ -170,9 +193,9 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="342725172546192" title="Gamepad Controls">
+        <event-group description="" disabled="1" sid="342725172546192" title="Gamepad Controls">
             <sub-events>
-                <event-block sid="899838800800353">
+                <event-block disabled="1" sid="899838800800353">
                     <conditions>
                         <condition id="5" name="Compare axis" sid="886940167059463" type="Gamepad">
                             <param id="0" name="Gamepad">0</param>
@@ -200,7 +223,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="495005822383954">
+                <event-block disabled="1" sid="495005822383954">
                     <conditions>
                         <condition id="5" name="Compare axis" sid="371059658779385" type="Gamepad">
                             <param id="0" name="Gamepad">0</param>
@@ -228,7 +251,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="920711288316349">
+                <event-block disabled="1" sid="920711288316349">
                     <conditions>
                         <condition id="9" name="On any button released" sid="281506554708370" type="Gamepad">
                             <param id="0" name="Gamepad">0</param>
@@ -252,7 +275,7 @@
                         <action id="-9" name="Destroy" sid="214110416364985" type="weedout2" />
                     </actions>
                 </event-block>
-                <event-block sid="112263085982009">
+                <event-block disabled="1" sid="112263085982009">
                     <conditions>
                         <condition id="6" name="On button pressed" sid="532654286319768" type="Gamepad">
                             <param id="0" name="Gamepad">0</param>
@@ -269,7 +292,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="243934625842163">
+                <event-block disabled="1" sid="243934625842163">
                     <conditions>
                         <condition id="6" name="On button pressed" sid="373520408668959" type="Gamepad">
                             <param id="0" name="Gamepad">0</param>
@@ -283,7 +306,7 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="222227155725336">
+                        <event-block disabled="1" sid="222227155725336">
                             <conditions>
                                 <condition id="7" name="Is mirrored" sid="230774030388485" type="player" />
                             </conditions>
@@ -300,7 +323,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="461834858581620">
+                        <event-block disabled="1" sid="461834858581620">
                             <conditions>
                                 <condition id="7" inverted="1" name="Is mirrored" sid="770578596335251" type="player" />
                             </conditions>
@@ -312,6 +335,153 @@
                                     <param id="3" name="Y">player.ImagePointY(2)</param>
                                 </action>
                                 <action id="4" name="Set animation" sid="618707480551316" type="weedout">
+                                    <param id="0" name="Animation">&quot;play&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="654560033398894" title="Gamepad D-Pad">
+            <sub-events>
+                <event-block sid="484585831688812">
+                    <conditions>
+                        <condition id="3" name="Is button down" sid="787400943236124" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">15</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="162168397699392" type="player">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="729246783029867" type="player">
+                            <param id="0" name="Animation">&quot;walk&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="464517635655580" type="player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="232042196265795" type="gunPistal">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="369550579126875" type="gunLauncher">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="902578039871041">
+                    <conditions>
+                        <condition id="3" name="Is button down" sid="570253374712180" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">14</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="608360048579758" type="player">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="621738132635495" type="player">
+                            <param id="0" name="Animation">&quot;walk&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="705584021137141" type="player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="785787969099265" type="gunPistal">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="247200228536896" type="gunLauncher">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="640937316933074">
+                    <conditions>
+                        <condition id="9" name="On any button released" sid="951370591234426" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="883216974358698" type="player">
+                            <param id="0" name="Animation">&quot;idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="175618998374139" type="gunPistal">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="957671410615296" type="gunLauncher">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="468896416375383" type="System">
+                            <param id="0" name="Seconds">1.7</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="222869721419729" type="weedout" />
+                        <action id="-9" name="Destroy" sid="629138229277495" type="weedout2" />
+                    </actions>
+                </event-block>
+                <event-block sid="662605911595504">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="730036072964577" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="355457894437223" type="player">
+                            <param id="0" name="Animation">&quot;shoot&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="262117639260117" type="gunPistal">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="340202526356449">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="216858017464901" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="155227715903888" type="player">
+                            <param id="0" name="Animation">&quot;sell&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="708528531603287">
+                            <conditions>
+                                <condition id="7" name="Is mirrored" sid="737681407917738" type="player" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="695053908960665" type="System">
+                                    <param id="0" name="Object to create">weedout2</param>
+                                    <param id="1" name="Layer">7</param>
+                                    <param id="2" name="X">player.ImagePointX(2)</param>
+                                    <param id="3" name="Y">player.ImagePointY(2)</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="797610748729377" type="weedout2">
+                                    <param id="0" name="Animation">&quot;play&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="485178443027766">
+                            <conditions>
+                                <condition id="7" inverted="1" name="Is mirrored" sid="799696026345097" type="player" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="201717699709874" type="System">
+                                    <param id="0" name="Object to create">weedout</param>
+                                    <param id="1" name="Layer">7</param>
+                                    <param id="2" name="X">player.ImagePointX(2)</param>
+                                    <param id="3" name="Y">player.ImagePointY(2)</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="618770498879152" type="weedout">
                                     <param id="0" name="Animation">&quot;play&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
@@ -444,8 +614,14 @@
                     <actions>
                         <action id="0" name="Spawn another object" sid="456030892555179" type="gunPistal">
                             <param id="0" name="Object">gunBullet</param>
-                            <param id="1" name="Layer">11</param>
+                            <param id="1" name="Layer">9</param>
                             <param id="2" name="Image point">2</param>
+                        </action>
+                        <action id="0" name="Play" sid="897299015947185" type="Audio">
+                            <param id="0" name="Audio file">gun</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-20</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                         <action id="0" name="Spawn another object" sid="664429137837929" type="gunPistal">
                             <param id="0" name="Object">muzzleFlash</param>
@@ -755,9 +931,9 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="529945912752832" title="Buyers AI">
+        <event-group description="" disabled="1" sid="529945912752832" title="Buyers AI">
             <sub-events>
-                <event-block sid="195704942780210">
+                <event-block disabled="1" sid="195704942780210">
                     <conditions>
                         <condition id="-18" name="On created" sid="453180984209792" type="npcBuyers" />
                     </conditions>
@@ -768,7 +944,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="768620221374488">
+                <event-block disabled="1" sid="768620221374488">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="297773620169975" type="npcBuyers">
                             <param id="0" name="Instance variable">direction</param>
@@ -785,7 +961,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="255049704404789">
+                <event-block disabled="1" sid="255049704404789">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="538526612052588" type="npcBuyers">
                             <param id="0" name="Instance variable">direction</param>
@@ -802,7 +978,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="122354743866758">
+                <event-block disabled="1" sid="122354743866758">
                     <conditions>
                         <condition behavior="Platform" id="10" name="Is by wall" sid="385931137735735" type="npcBuyers">
                             <param id="0" name="Side">0</param>
@@ -815,7 +991,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="524562566821514">
+                <event-block disabled="1" sid="524562566821514">
                     <conditions>
                         <condition behavior="Platform" id="10" name="Is by wall" sid="468225736559410" type="npcBuyers">
                             <param id="0" name="Side">1</param>
@@ -830,9 +1006,9 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="725705454452247" title="Buyers AI Tech">
+        <event-group description="" disabled="1" sid="725705454452247" title="Buyers AI Tech">
             <sub-events>
-                <event-block sid="282430117573265">
+                <event-block disabled="1" sid="282430117573265">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="404622887702058" type="System">
                             <param id="0" name="Interval (seconds)">55.0</param>
@@ -847,7 +1023,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="120875268253553">
+                <event-block disabled="1" sid="120875268253553">
                     <conditions>
                         <condition id="-11" name="For Each" sid="852073412111028" type="System">
                             <param id="0" name="Object">npcBuyers</param>
@@ -855,7 +1031,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="461550032978182">
+                        <event-block disabled="1" sid="461550032978182">
                             <conditions>
                                 <condition id="-4" name="Trigger once while true" sid="906295147016613" type="System" />
                             </conditions>
@@ -868,7 +1044,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="593301419023197">
+                        <event-block disabled="1" sid="593301419023197">
                             <conditions>
                                 <condition id="-5" name="Compare width" sid="612670615920538" type="enemyHealthbar">
                                     <param id="0" name="Comparison">3</param>
@@ -881,7 +1057,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="865381134680127">
+                <event-block disabled="1" sid="865381134680127">
                     <conditions>
                         <condition id="-1" name="Every tick" sid="383910651487051" type="System" />
                     </conditions>
@@ -895,7 +1071,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="519380344462018">
+                <event-block disabled="1" sid="519380344462018">
                     <conditions>
                         <condition id="6" name="On object clicked" sid="338291159878235" type="Mouse">
                             <param id="0" name="Mouse button">0</param>
@@ -910,7 +1086,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="489260376216268">
+                <event-block disabled="1" sid="489260376216268">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="253537413443646" type="gunBullet">
                             <param id="0" name="Object">npcBuyers</param>
@@ -928,7 +1104,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="675972118086841">
+                <event-block disabled="1" sid="675972118086841">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="840139492738836" type="npcBuyers">
                             <param id="0" name="Instance variable">npcHealth</param>
@@ -1000,5 +1176,251 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="280513409207365" title="Elevators">
+            <sub-events>
+                <event-block sid="262038454887554">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="961379379544861" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="665701637848587">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="772692971045880" type="elevaLab">
+                                    <param id="0" name="Instance variable">elevate</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;up&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="333981020852811" type="elevaLab">
+                                    <param id="0" name="Y">elevaLab.Y -2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="843806507249061">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="856891962369606" type="elevaLab">
+                                    <param id="0" name="Instance variable">elevate</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;down&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="598825262985845" type="elevaLab">
+                                    <param id="0" name="Y">elevaLab.Y +2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="313837572721860">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="463085232577213" type="elevLabfixed1">
+                            <param id="0" name="Object">elevaLab</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="983782530617421" type="elevaLab">
+                            <param id="0" name="Instance variable">elevate</param>
+                            <param id="1" name="Value">&quot;fixed&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="632990920394107">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="417159052172864" type="player">
+                            <param id="0" name="Object">labdoorVis</param>
+                        </condition>
+                        <condition id="3" name="Is button down" sid="988679847604003" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="371945542615289" type="labDoorclosed">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="638846587144967" type="System">
+                            <param id="0" name="Seconds">5.0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="168728545557168">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="462844207009164" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">1</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="539379078778031" type="player">
+                            <param id="0" name="Object">elevLabtrigger</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="734725797786513" type="elevaLab">
+                            <param id="0" name="Instance variable">elevate</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;fixed&quot;</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="265199970756289" type="elevLabtrigger">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="120264960538792" type="elevLabtrigger">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="255848674722368" type="elevaLab">
+                            <param id="0" name="Instance variable">elevate</param>
+                            <param id="1" name="Value">&quot;down&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="968158073444272">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="610505550621736" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">1</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="207401595515542" type="player">
+                            <param id="0" name="Object">elevLabtrigger</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="733564632690782" type="elevaLab">
+                            <param id="0" name="Instance variable">elevate</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;fixed&quot;</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="564378324605393" type="elevLabtrigger">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="907135989541225" type="elevLabtrigger">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="189973592323398" type="elevaLab">
+                            <param id="0" name="Instance variable">elevate</param>
+                            <param id="1" name="Value">&quot;up&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="200844785602362">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="576553802622192" type="player">
+                            <param id="0" name="Object">elevLabtrigger</param>
+                        </condition>
+                        <condition id="3" name="Is button down" sid="664709059841711" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="927003060007828" type="System">
+                            <param id="0" name="Object to create">labDoorclosed</param>
+                            <param id="1" name="Layer">11</param>
+                            <param id="2" name="X">159.339</param>
+                            <param id="3" name="Y">1099.708</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="648468401481373" title="Store">
+            <sub-events>
+                <event-block sid="299903240356520">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="845058235090767" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">1</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="968587751750178" type="player">
+                            <param id="0" name="Object">storeTriggerin</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="647443863085792" type="System">
+                            <param id="0" name="Layer">8</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="147553216779571" type="System">
+                            <param id="0" name="Layer">12</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="127696584384583" type="storeWall">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="792835325702141" type="storeTriggerin" />
+                        <action id="-16" name="Wait" sid="512402896776408" type="System">
+                            <param id="0" name="Seconds">0.01</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="878890539686363" type="System">
+                            <param id="0" name="Object to create">storeTriggerout</param>
+                            <param id="1" name="Layer">8</param>
+                            <param id="2" name="X">1353.884</param>
+                            <param id="3" name="Y">1142.584</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="568870564158575">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="676357522721351" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">1</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="106949521684051" type="player">
+                            <param id="0" name="Object">storeTriggerout</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="575921936668208" type="System">
+                            <param id="0" name="Layer">8</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="642405592368679" type="System">
+                            <param id="0" name="Layer">12</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="926014611677372" type="storeWall">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="198311003640087" type="storeTriggerout" />
+                        <action id="-16" name="Wait" sid="616862363946726" type="System">
+                            <param id="0" name="Seconds">0.01</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="734390425459231" type="System">
+                            <param id="0" name="Object to create">storeTriggerin</param>
+                            <param id="1" name="Layer">8</param>
+                            <param id="2" name="X">1353.884</param>
+                            <param id="3" name="Y">1142.584</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="464606749494341">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="792239003301666" type="player">
+                    <param id="0" name="Object">elevLabfixed1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="297749359914958" type="System">
+                    <param id="0" name="Object to create">Sprite11</param>
+                    <param id="1" name="Layer">11</param>
+                    <param id="2" name="X">157</param>
+                    <param id="3" name="Y">1033</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="468681957297629">
+            <conditions>
+                <condition id="1" inverted="1" name="Is overlapping another object" sid="613699426456958" type="player">
+                    <param id="0" name="Object">elevLabfixed1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="793986062705920" type="Sprite11" />
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

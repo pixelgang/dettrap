@@ -10,8 +10,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="1">main</layout>
-        <event-sheet order="0">mainSheet</event-sheet>
+        <layout order="1">main</layout>
+        <event-sheet active="1" order="0">mainSheet</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -22,7 +22,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <families-expanded root="1" />
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
-        <folder expanded="0" path="object-folder/plugins/" />
+        <folder expanded="1" path="object-folder/plugins/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="1" path="file-folder/" />
@@ -39,7 +39,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Sprite8/" />
         <folder expanded="1" path="animation-folder/Sprite9/" />
         <folder expanded="1" path="animation-folder/Sprite10/" />
-        <folder expanded="1" path="animation-folder/Sprite11/" />
+        <folder expanded="1" path="animation-folder/subLabdoor/" />
         <folder expanded="1" path="animation-folder/solidTexture/" />
         <folder expanded="1" path="animation-folder/Sprite/" />
         <folder expanded="1" path="animation-folder/player/" />
@@ -49,7 +49,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/portal4_apartment/" />
         <folder expanded="1" path="animation-folder/portal5_bar/" />
         <folder expanded="1" path="animation-folder/portal6_department/" />
-        <folder expanded="1" path="animation-folder/portal7_poppy/" />
+        <folder expanded="1" path="animation-folder/storeTriggerout/" />
         <folder expanded="1" path="animation-folder/Sprite2/" />
         <folder expanded="1" path="animation-folder/portal_labdoor/" />
         <folder expanded="1" path="animation-folder/Sprite3/" />
@@ -69,5 +69,18 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/npcTalkingpoint/" />
         <folder expanded="1" path="animation-folder/npcBuyers/" />
         <folder expanded="1" path="animation-folder/zoomOut/" />
+        <folder expanded="1" path="animation-folder/elevLabfixed1/" />
+        <folder expanded="1" path="animation-folder/elevLabtrigger/" />
+        <folder expanded="1" path="animation-folder/Sprite4/" />
+        <folder expanded="1" path="animation-folder/elevaLab/" />
+        <folder expanded="1" path="animation-folder/labDoorclosed/" />
+        <folder expanded="1" path="animation-folder/labDooropen/" />
+        <folder expanded="1" path="animation-folder/labsubDoorcut/" />
+        <folder expanded="1" path="animation-folder/labdoorVis/" />
+        <folder expanded="1" path="animation-folder/storefront/" />
+        <folder expanded="1" path="animation-folder/storeWall/" />
+        <folder expanded="1" path="animation-folder/storeTriggerin/" />
+        <folder expanded="1" path="animation-folder/Sprite5/" />
+        <folder expanded="1" path="animation-folder/Sprite11/" />
     </folders-expanded>
 </c2uistate>

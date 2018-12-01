@@ -95,7 +95,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="194085262953945" speed="5">
-                    <frame duration="1" hotspotX="0.497849" hotspotY="0.867395" original-source="C:\Users\Gerrell\Desktop\Defend the trap\levels\level_main.png">
+                    <frame duration="1" hotspotX="0.497849" hotspotY="0.866776" original-source="C:\Users\Gerrell\Desktop\Defend the trap\levels\level_main.png">
                         <collision-poly>
                             <point x="0.210753" y="0.5117" />
                             <point x="0.497849" y="0.174727" />
@@ -145,7 +145,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="181200978237083" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.50303" original-source="C:\Users\Gerrell\Desktop\Defend the trap\levels\level_street.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503759" original-source="C:\Users\Gerrell\Desktop\Defend the trap\levels\level_street.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -217,7 +217,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite11" sid="277558154281341">
+        <object-type name="subLabdoor" sid="277558154281341">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="936835558387727" speed="5">
@@ -273,42 +273,137 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="idle" pingpong="0" repeatcount="1" repeatto="0" sid="997000229784410" speed="5">
-                    <frame duration="1" hotspotX="0.46875" hotspotY="1" original-source="C:\Users\Gerrell\Desktop\Pixel Apps\Defend the Trap\Project\Animations\player\stand\000.png" />
+                    <frame duration="1" hotspotX="0.46875" hotspotY="1" original-source="C:\Users\Gerrell\Desktop\Pixel Apps\Defend the Trap\Project\Animations\player\stand\000.png">
+                        <collision-poly>
+                            <point x="0.419922" y="0.277344" />
+                            <point x="0.666016" y="0.248047" />
+                            <point x="0.71875" y="1" />
+                            <point x="0.310547" y="1" />
+                        </collision-poly>
+                    </frame>
                 </animation>
                 <animation framecount="4" loop="1" name="walk" pingpong="0" repeatcount="1" repeatto="0" sid="694233560452988" speed="8">
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Gerrell\Desktop\Pixel Apps\Defend the Trap\Project\Animations\player\walk\000.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Gerrell\Desktop\Pixel Apps\Defend the Trap\Project\Animations\player\walk\001.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Gerrell\Desktop\Pixel Apps\Defend the Trap\Project\Animations\player\walk\002.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Gerrell\Desktop\Pixel Apps\Defend the Trap\Project\Animations\player\walk\003.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Gerrell\Desktop\Pixel Apps\Defend the Trap\Project\Animations\player\walk\000.png">
+                        <collision-poly>
+                            <point x="0.412109" y="0.302734" />
+                            <point x="0.669922" y="0.251953" />
+                            <point x="0.746094" y="1" />
+                            <point x="0.279297" y="0.998047" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Gerrell\Desktop\Pixel Apps\Defend the Trap\Project\Animations\player\walk\001.png">
+                        <collision-poly>
+                            <point x="0.332031" y="0.236328" />
+                            <point x="0.712891" y="0.285156" />
+                            <point x="0.681641" y="0.996094" />
+                            <point x="0.34375" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Gerrell\Desktop\Pixel Apps\Defend the Trap\Project\Animations\player\walk\002.png">
+                        <collision-poly>
+                            <point x="0.289063" y="0" />
+                            <point x="0.724609" y="0" />
+                            <point x="0.740234" y="0.998047" />
+                            <point x="0.322266" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Gerrell\Desktop\Pixel Apps\Defend the Trap\Project\Animations\player\walk\003.png">
+                        <collision-poly>
+                            <point x="0.378906" y="0.285156" />
+                            <point x="0.697266" y="0.263672" />
+                            <point x="0.703125" y="0.990234" />
+                            <point x="0.330078" y="1" />
+                        </collision-poly>
+                    </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="jump" pingpong="0" repeatcount="1" repeatto="0" sid="320249675116334" speed="8">
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Gerrell\Desktop\Pixel Apps\Defend the Trap\Project\Animations\player\jump\000.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Gerrell\Desktop\Pixel Apps\Defend the Trap\Project\Animations\player\jump\000.png">
+                        <collision-poly>
+                            <point x="0.371094" y="0.267578" />
+                            <point x="0.753906" y="0.253906" />
+                            <point x="0.675781" y="1" />
+                            <point x="0.287109" y="1" />
+                        </collision-poly>
+                    </frame>
                 </animation>
                 <animation framecount="3" loop="1" name="attack" pingpong="0" repeatcount="1" repeatto="0" sid="237867376100441" speed="8">
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Gerrell\Desktop\Pixel Apps\Defend the Trap\Project\Animations\player\attack\000.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Gerrell\Desktop\Pixel Apps\Defend the Trap\Project\Animations\player\attack\001.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Gerrell\Desktop\Pixel Apps\Defend the Trap\Project\Animations\player\attack\002.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Gerrell\Desktop\Pixel Apps\Defend the Trap\Project\Animations\player\attack\000.png">
+                        <collision-poly>
+                            <point x="0.361328" y="0.238281" />
+                            <point x="0.728516" y="0.291016" />
+                            <point x="0.705078" y="1" />
+                            <point x="0.294922" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Gerrell\Desktop\Pixel Apps\Defend the Trap\Project\Animations\player\attack\001.png">
+                        <collision-poly>
+                            <point x="0.417969" y="0.263672" />
+                            <point x="0.728516" y="0.261719" />
+                            <point x="0.705078" y="1" />
+                            <point x="0.298828" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Gerrell\Desktop\Pixel Apps\Defend the Trap\Project\Animations\player\attack\002.png">
+                        <collision-poly>
+                            <point x="0.410156" y="0.248047" />
+                            <point x="0.744141" y="0.296875" />
+                            <point x="0.697266" y="1" />
+                            <point x="0.300781" y="1" />
+                        </collision-poly>
+                    </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="fall" pingpong="0" repeatcount="1" repeatto="0" sid="648774579143256" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Gerrell\Desktop\Pixel Apps\Defend the Trap\Project\Animations\player\fall\000.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Gerrell\Desktop\Pixel Apps\Defend the Trap\Project\Animations\player\fall\000.png">
+                        <collision-poly>
+                            <point x="0.388672" y="0.257813" />
+                            <point x="0.712891" y="0.259766" />
+                            <point x="0.738281" y="1" />
+                            <point x="0.261719" y="1" />
+                        </collision-poly>
+                    </frame>
                 </animation>
                 <animation framecount="2" loop="1" name="sell" pingpong="0" repeatcount="1" repeatto="0" sid="971598456460591" speed="8">
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Gerrell\Desktop\Pixel Apps\Defend the Trap\Project\Animations\player\magic\000.png">
                         <image-point name="Imagepoint 1" x="0.75" y="0.6875" />
                         <image-point name="Imagepoint 2" x="1.09375" y="-0.15625" />
+                        <collision-poly>
+                            <point x="0.396484" y="0.220703" />
+                            <point x="0.779297" y="0.324219" />
+                            <point x="0.699219" y="0.994141" />
+                            <point x="0.349609" y="1" />
+                        </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Gerrell\Desktop\Pixel Apps\Defend the Trap\Project\Animations\player\magic\001.png">
                         <image-point name="Imagepoint 1" x="0.75" y="0.6875" />
                         <image-point name="Imagepoint 2" x="1.09375" y="-0.15625" />
+                        <collision-poly>
+                            <point x="0.367188" y="0.226563" />
+                            <point x="0.800781" y="0.296875" />
+                            <point x="0.650391" y="0.990234" />
+                            <point x="0.347656" y="1" />
+                        </collision-poly>
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="shoot" pingpong="0" repeatcount="1" repeatto="0" sid="766431995177799" speed="5">
                     <frame duration="1" hotspotX="0.28125" hotspotY="1" original-source="C:\Users\Gerrell\Desktop\Pixel Apps\Defend the Trap\Project\Animations\player\archery\000.png">
                         <image-point name="Imagepoint 1" x="0.625" y="0.5625" />
+                        <collision-poly>
+                            <point x="0.148438" y="0.263672" />
+                            <point x="0.599609" y="0.3125" />
+                            <point x="0.472656" y="1" />
+                            <point x="0.0566406" y="1" />
+                        </collision-poly>
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="hide" pingpong="0" repeatcount="1" repeatto="0" sid="981560641623434" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Gerrell\Desktop\Pixel Apps\Defend the Trap\Project\Animations\player\crouch\000.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Gerrell\Desktop\Pixel Apps\Defend the Trap\Project\Animations\player\crouch\000.png">
+                        <collision-poly>
+                            <point x="0.355469" y="0.400391" />
+                            <point x="0.748047" y="0.431641" />
+                            <point x="0.763672" y="0.998047" />
+                            <point x="0.28125" y="1" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -360,7 +455,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="portal7_poppy" sid="566059188194020">
+        <object-type name="storeTriggerout" sid="566059188194020">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="555984847725587" speed="5">
@@ -699,6 +794,179 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="elevLabfixed1" sid="374612999888281">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Fixed" sid="871646581489361" type="string" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="689611744401949" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0">
+                        <image-point name="Imagepoint 1" x="0.5" y="0" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="elevLabtrigger" sid="868160875154083">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="781470615851421" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="0.5" y="1" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite4" sid="380027555088809">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="964826093654963" speed="5">
+                    <frame duration="1" hotspotX="0.514286" hotspotY="0.5" original-source="C:\Users\Gerrell\Desktop\Defend the trap\subdooropen.png">
+                        <collision-poly>
+                            <point x="0.0285714" y="0.025" />
+                            <point x="0.485714" y="0" />
+                            <point x="0.914286" y="0.075" />
+                            <point x="0.914286" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0.485714" y="0.125" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="elevaLab" sid="977676410572306">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="elevate" sid="768576844258966" type="string" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Solid" sid="641765180739768">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="479258777861357" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0">
+                        <image-point name="Imagepoint 1" x="0.5" y="0" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="labDoorclosed" sid="194729850864393">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="790942268498937" speed="5">
+                    <frame duration="1" hotspotX="0.509434" hotspotY="0.50505" original-source="C:\Users\Gerrell\Desktop\Defend the trap\lab_door2.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="labDooropen" sid="108834481846487">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="959087212103665" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Gerrell\Desktop\Defend the trap\lab_door.png">
+                        <collision-poly>
+                            <point x="0.166667" y="0.0803571" />
+                            <point x="0.5" y="0.0178571" />
+                            <point x="0.740741" y="0.125" />
+                            <point x="1" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="labsubDoorcut" sid="363029934702661">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="432522957719056" speed="5">
+                    <frame duration="1" hotspotX="0.514286" hotspotY="0.5" original-source="C:\Users\Gerrell\Desktop\Defend the trap\subdooropen2.png">
+                        <collision-poly>
+                            <point x="0.0285714" y="0.025" />
+                            <point x="0.485714" y="0" />
+                            <point x="0.914286" y="0.075" />
+                            <point x="0.8" y="0.5" />
+                            <point x="0.8" y="0.825" />
+                            <point x="0.485714" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="labdoorVis" sid="758931412945232">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="296697237241683" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="storefront" sid="302089436231124">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="726241981868896" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501832" original-source="C:\Users\Gerrell\Desktop\Defend the trap\store.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="storeWall" sid="132795733877047">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="682885627243442">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="668304149588149" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="storeTriggerin" sid="161133223665871">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="276420356336058" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite5" sid="642727659174571">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="605628949639812" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.50165" original-source="C:\Users\Gerrell\Desktop\Defend the trap\lab.png">
+                        <collision-poly>
+                            <point x="0.022" y="0.0726073" />
+                            <point x="0.5" y="0.524752" />
+                            <point x="0.451" y="0.49835" />
+                            <point x="0.5" y="1" />
+                            <point x="0.233" y="0.231023" />
+                            <point x="0.233" y="0.49835" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite11" sid="282692092242085">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="6" loop="1" name="run" pingpong="0" repeatcount="1" repeatto="0" sid="894467304368741" speed="6">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.50303" original-source="C:\Users\Gerrell\Desktop\Defend the trap\Old Files\enter sign\enter_1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.50303" original-source="C:\Users\Gerrell\Desktop\Defend the trap\Old Files\enter sign\enter_2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.50303" original-source="C:\Users\Gerrell\Desktop\Defend the trap\Old Files\enter sign\enter_3.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.50303" original-source="C:\Users\Gerrell\Desktop\Defend the trap\Old Files\enter sign\enter_4.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.50303" original-source="C:\Users\Gerrell\Desktop\Defend the trap\Old Files\enter sign\enter_6.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.50303" original-source="C:\Users\Gerrell\Desktop\Defend the trap\Old Files\enter sign\enter5.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -755,7 +1023,10 @@
         <global-instance type="Function" uid="2562" />
         <global-instance type="Mouse" uid="2568" />
     </global-instances>
-    <sounds-folder />
+    <sounds-folder>
+        <file name="gun.m4a" />
+        <file name="gun.ogg" />
+    </sounds-folder>
     <music-folder />
     <files-folder>
         <file-folder name="Icons">
