@@ -80,7 +80,28 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/storefront/" />
         <folder expanded="1" path="animation-folder/storeWall/" />
         <folder expanded="1" path="animation-folder/storeTriggerin/" />
+        <folder expanded="1" path="animation-folder/hyromachine1/" />
+        <folder expanded="1" path="animation-folder/entersign/" />
+        <folder expanded="1" path="animation-folder/labComplete/" />
+        <folder expanded="1" path="animation-folder/hydromachine2/" />
+        <folder expanded="1" path="animation-folder/pipe_Long/" />
         <folder expanded="1" path="animation-folder/Sprite5/" />
+        <folder expanded="1" path="animation-folder/labcoBlock/" />
+        <folder expanded="1" path="animation-folder/LapcoOpen/" />
+        <folder expanded="1" path="animation-folder/minusbutton/" />
         <folder expanded="1" path="animation-folder/Sprite11/" />
+        <folder expanded="1" path="animation-folder/healthbar2/" />
+        <folder expanded="1" path="animation-folder/weedbarBack/" />
+        <folder expanded="1" path="animation-folder/weedbar/" />
+        <folder expanded="1" path="animation-folder/weedIcon/" />
+        <folder expanded="1" path="animation-folder/labcoKey/" />
+        <folder expanded="1" path="animation-folder/labcoWeedtable/" />
+        <folder expanded="1" path="animation-folder/Sprite13/" />
+        <folder expanded="1" path="animation-folder/weedPackage/" />
+        <folder expanded="1" path="animation-folder/subwayWindow/" />
+        <folder expanded="1" path="animation-folder/subwayGlass/" />
+        <folder expanded="1" path="animation-folder/Sprite15/" />
+        <folder expanded="1" path="animation-folder/subway/" />
+        <folder expanded="1" path="animation-folder/labcoDoorlock/" />
     </folders-expanded>
 </c2uistate>

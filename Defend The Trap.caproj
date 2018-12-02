@@ -262,6 +262,10 @@
                 <instance-variable comment="if shooting button is held down" name="isShoot" sid="113423781901182" type="number" />
                 <instance-variable comment="rate of fire" name="wepRate" sid="703086142109069" type="number" />
                 <instance-variable comment="actual weapon to call" name="wepType" sid="563375360322639" type="string" />
+                <instance-variable name="health" sid="319787366597515" type="number" />
+                <instance-variable name="health_max" sid="488067927576831" type="number" />
+                <instance-variable name="canshoot" sid="388268504973821" type="string" />
+                <instance-variable name="health_current" sid="147824380010631" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Platform" sid="756366009744476">
@@ -937,7 +941,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite5" sid="642727659174571">
+        <object-type name="hyromachine1" sid="642727659174571">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="605628949639812" speed="5">
@@ -954,9 +958,12 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite11" sid="282692092242085">
+        <object-type name="entersign" sid="282692092242085">
             <plugin id="Sprite" />
             <animation-folder>
+                <animation framecount="1" loop="0" name="idle" pingpong="0" repeatcount="1" repeatto="0" sid="276403330058891" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.50303" original-source="C:\Users\Gerrell\Documents\GitHub\dettrap\Animations\entersign\run\000.png" />
+                </animation>
                 <animation framecount="6" loop="1" name="run" pingpong="0" repeatcount="1" repeatto="0" sid="894467304368741" speed="6">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.50303" original-source="C:\Users\Gerrell\Desktop\Defend the trap\Old Files\enter sign\enter_1.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.50303" original-source="C:\Users\Gerrell\Desktop\Defend the trap\Old Files\enter sign\enter_2.png" />
@@ -964,6 +971,347 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.50303" original-source="C:\Users\Gerrell\Desktop\Defend the trap\Old Files\enter sign\enter_4.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.50303" original-source="C:\Users\Gerrell\Desktop\Defend the trap\Old Files\enter sign\enter_6.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.50303" original-source="C:\Users\Gerrell\Desktop\Defend the trap\Old Files\enter sign\enter5.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="labComplete" sid="898997324652265">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="310869472971039" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Gerrell\Desktop\Defend the trap\sub level\MainFiles\Objects\LaboratoryObject_0094 (45).png">
+                        <collision-poly>
+                            <point x="0.125" y="0.0769231" />
+                            <point x="0.5" y="0" />
+                            <point x="0.875" y="0.0769231" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="hydromachine2" sid="258764800096584">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="706138300919712" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.50165" original-source="C:\Users\Gerrell\Desktop\Defend the trap\sub level\000.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.524752" />
+                            <point x="0.978" y="0.0726073" />
+                            <point x="0.767" y="0.49835" />
+                            <point x="0.767" y="0.231023" />
+                            <point x="0.5" y="1" />
+                            <point x="0.549" y="0.49835" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="pipe_Long" sid="423789579772928">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="772125712799433" speed="5">
+                    <frame duration="1" hotspotX="0.502203" hotspotY="0.5" original-source="C:\Users\Gerrell\Desktop\Defend the trap\sub level\pipe_long.png">
+                        <collision-poly>
+                            <point x="0.0969163" y="0.203704" />
+                            <point x="0.903084" y="0.203704" />
+                            <point x="0.740088" y="0.453704" />
+                            <point x="0.259912" y="0.453704" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite5" sid="680448590181470">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="241100549843731" speed="5">
+                    <frame duration="1" hotspotX="0.507937" hotspotY="0.5" original-source="C:\Users\Gerrell\Desktop\Defend the trap\sub level\pipel.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.492063" y="0" />
+                            <point x="0.873016" y="0.0930233" />
+                            <point x="0.984127" y="0.5" />
+                            <point x="0.984127" y="0.988372" />
+                            <point x="0.492063" y="0.337209" />
+                            <point x="0.507937" y="0.627907" />
+                            <point x="0.507937" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="labcoBlock" sid="163813829216870">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="562314694458773">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="472573503170155" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LapcoOpen" sid="985855116429925">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="513062468456451" speed="5">
+                    <frame duration="1" hotspotX="0.538462" hotspotY="0.583333" original-source="C:\Users\Gerrell\Desktop\Defend the trap\labcokey.png">
+                        <collision-poly>
+                            <point x="0.152473" y="0.253496" />
+                            <point x="0.535256" y="0" />
+                            <point x="0.91804" y="0.253496" />
+                            <point x="1" y="0.473776" />
+                            <point x="1" y="1" />
+                            <point x="0.535256" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0.0567764" y="0.473776" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="healthbar" sid="539240517860614">
+            <plugin id="TiledBg" />
+            <instance-variables>
+                <instance-variable name="max_width" sid="306174536367594" type="number" />
+            </instance-variables>
+            <texture original-source="C:\Users\Gerrell\Desktop\Defend the trap\gui\hb.png" />
+        </object-type>
+        <object-type name="minusbutton" sid="598602958982449">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="483278974428255" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507246" original-source="C:\Users\Gerrell\Desktop\Defend the trap\itemspot.png">
+                        <collision-poly>
+                            <point x="0.035" y="0.101449" />
+                            <point x="0.5" y="0" />
+                            <point x="0.965" y="0.101449" />
+                            <point x="1" y="0.492754" />
+                            <point x="0.965" y="0.898551" />
+                            <point x="0.5" y="0.971014" />
+                            <point x="0.035" y="0.898551" />
+                            <point x="0" y="0.492754" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite11" sid="340962324292012">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="395690655631645" speed="5">
+                    <frame duration="1" hotspotX="0.518135" hotspotY="0.48" original-source="C:\Users\Gerrell\Desktop\Defend the trap\gui\ha.png">
+                        <collision-poly>
+                            <point x="0.0621762" y="0.16" />
+                            <point x="0.518135" y="0.14" />
+                            <point x="0.968912" y="0.18" />
+                            <point x="0.994819" y="0.48" />
+                            <point x="0.979275" y="0.82" />
+                            <point x="0.518135" y="0.88" />
+                            <point x="0.0777202" y="0.74" />
+                            <point x="0.015544" y="0.48" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="healthbar2" sid="843574914715888">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="max_width" sid="727333576092923" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="799857471463681" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0.52" original-source="C:\Users\Gerrell\Desktop\Defend the trap\gui\hb.png">
+                        <collision-poly>
+                            <point x="0.015" y="0.12" />
+                            <point x="0.5" y="0" />
+                            <point x="0.985" y="0.12" />
+                            <point x="1" y="0.48" />
+                            <point x="0.985" y="0.88" />
+                            <point x="0.5" y="1" />
+                            <point x="0.015" y="0.88" />
+                            <point x="0" y="0.48" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="weedbarBack" sid="266520253045055">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="229303623973966" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Gerrell\Desktop\Defend the trap\gui\wa.png">
+                        <collision-poly>
+                            <point x="0.0445545" y="0.1875" />
+                            <point x="0.5" y="0.104167" />
+                            <point x="0.965347" y="0.145833" />
+                            <point x="0.995049" y="0.5" />
+                            <point x="0.970297" y="0.875" />
+                            <point x="0.5" y="0.9375" />
+                            <point x="0.0544554" y="0.770833" />
+                            <point x="0.0247525" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="weedbar" sid="377604145653061">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="max_witdh" sid="386468465812750" type="number" />
+                <instance-variable name="current" sid="464574255377074" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="440139863800640" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0.52" original-source="C:\Users\Gerrell\Desktop\Defend the trap\gui\wb.png">
+                        <collision-poly>
+                            <point x="0.015" y="0.12" />
+                            <point x="0.5" y="0" />
+                            <point x="0.985" y="0.12" />
+                            <point x="1" y="0.48" />
+                            <point x="0.99" y="0.92" />
+                            <point x="0.5" y="1" />
+                            <point x="0.015" y="0.88" />
+                            <point x="0" y="0.48" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="weedIcon" sid="243068625702489">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="685464948701528" speed="5">
+                    <frame duration="1" hotspotX="0.476744" hotspotY="0.5" original-source="C:\Users\Gerrell\Desktop\Defend the trap\gui\weed.png">
+                        <collision-poly>
+                            <point x="0.476744" y="0.0465116" />
+                            <point x="0.767442" y="0.22093" />
+                            <point x="0.965116" y="0.488372" />
+                            <point x="0.476744" y="0.976744" />
+                            <point x="0.197674" y="0.755814" />
+                            <point x="0.0348837" y="0.488372" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="labcoKey" sid="640031682200994">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="203954091302817" speed="5">
+                    <frame duration="1" hotspotX="0.502392" hotspotY="0.502645" original-source="C:\Users\Gerrell\Desktop\Defend the trap\labcokey.png">
+                        <collision-poly>
+                            <point x="0.382775" y="0.42328" />
+                            <point x="0.497608" y="0.100529" />
+                            <point x="0.813397" y="0.206349" />
+                            <point x="0.760766" y="0.497355" />
+                            <point x="0.645933" y="0.608466" />
+                            <point x="0.497608" y="0.603175" />
+                            <point x="0.114833" y="0.873016" />
+                            <point x="0.311005" y="0.497355" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="labcoWeedtable" sid="626438961758779">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="334118161787092" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.517241" original-source="C:\Users\Gerrell\Desktop\Defend the trap\sub level\MainFiles\Objects\LaboratoryObject_0094 (65).png">
+                        <collision-poly>
+                            <point x="0.0909091" y="0.137931" />
+                            <point x="0.5" y="0.0689655" />
+                            <point x="0.909091" y="0.137931" />
+                            <point x="1" y="0.482759" />
+                            <point x="0.931818" y="0.896552" />
+                            <point x="0.5" y="0.827586" />
+                            <point x="0.0681818" y="0.896552" />
+                            <point x="0" y="0.482759" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite13" sid="386358002225513">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="339217002240575" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="weedPackage" sid="544701970889159">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="883514614239716" speed="5">
+                    <frame duration="1" hotspotX="0.476744" hotspotY="0.5" original-source="C:\Users\Gerrell\Desktop\Defend the trap\gui\weed.png">
+                        <collision-poly>
+                            <point x="0.476744" y="0.0465116" />
+                            <point x="0.767442" y="0.22093" />
+                            <point x="0.965116" y="0.488372" />
+                            <point x="0.476744" y="0.976744" />
+                            <point x="0.197674" y="0.755814" />
+                            <point x="0.0348837" y="0.488372" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="subwayWindow" sid="382183497442620">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="286809331415862" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Gerrell\Desktop\Defend the trap\gui\subwindow.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="subwayGlass" sid="886556888668168">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="881588426907513" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503497" original-source="C:\Users\Gerrell\Desktop\Defend the trap\gui\subglass.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite15" sid="599449720052180">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="648555692898867" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="subway" sid="334528230547941">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="391567989579250">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="204296867225446" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\Gerrell\Desktop\Defend the trap\gui\subway.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.993333" y="0.0224719" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="labcoDoorlock" sid="207712921324067">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="946466459640718" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>

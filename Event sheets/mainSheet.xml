@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>mainSheet</name>
     <events>
+        <variable constant="0" name="labcoKey" sid="479060158985446" static="0" type="number">0</variable>
+        <variable constant="0" name="Labco" sid="544947919812136" static="0" type="number">0</variable>
         <variable constant="0" name="zoomgrave" sid="695806996537320" static="0" type="number">0</variable>
         <variable constant="0" name="Zoom" sid="887632453366085" static="0" type="number">0</variable>
         <event-block sid="592408424518251">
@@ -44,6 +46,52 @@
                     <param id="1" name="Layer">8</param>
                     <param id="2" name="X">1353.884</param>
                     <param id="3" name="Y">1142.584</param>
+                </action>
+                <action id="-15" name="Set visible" sid="695267735145315" type="labDoorclosed">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="990340135181982">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="373727549217763" type="System">
+                    <param id="0" name="Variable">Labco</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="271628107512180" type="labcoBlock" />
+                <action id="-15" name="Set visible" sid="513589327516058" type="labDoorclosed">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="395767175514215">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="892281207757075" type="player">
+                    <param id="0" name="Object">LapcoOpen</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="140074920913663" type="labcoBlock" />
+                <action id="-9" name="Destroy" sid="527800898425992" type="LapcoOpen" />
+                <action id="-9" name="Set value" sid="872376547514776" type="System">
+                    <param id="0" name="Variable">Labco</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="560547162539184" type="System">
+                    <param id="0" name="Variable">labcoKey</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-3" name="Create object" sid="357155862713127" type="System">
+                    <param id="0" name="Object to create">labcoKey</param>
+                    <param id="1" name="Layer">16</param>
+                    <param id="2" name="X">420.324</param>
+                    <param id="3" name="Y">17.859</param>
+                </action>
+                <action id="5" name="Set frame" sid="646722688212674" type="labcoDoorlock">
+                    <param id="0" name="Frame number">0</param>
                 </action>
             </actions>
         </event-block>
@@ -761,12 +809,12 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="370411893646135" title="Enemy AI Tech">
+        <event-group description="" disabled="1" sid="370411893646135" title="Enemy AI Tech">
             <sub-events>
-                <event-block sid="458629731242228">
+                <event-block disabled="1" sid="458629731242228">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="999717606441574" type="System">
-                            <param id="0" name="Interval (seconds)">120</param>
+                            <param id="0" name="Interval (seconds)">30</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -778,7 +826,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="300418720993725">
+                <event-block disabled="1" sid="300418720993725">
                     <conditions>
                         <condition id="-11" name="For Each" sid="333033943639509" type="System">
                             <param id="0" name="Object">enemy</param>
@@ -786,7 +834,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="281649646900805">
+                        <event-block disabled="1" sid="281649646900805">
                             <conditions>
                                 <condition id="-4" name="Trigger once while true" sid="814065823606517" type="System" />
                             </conditions>
@@ -799,7 +847,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="801935494897570">
+                        <event-block disabled="1" sid="801935494897570">
                             <conditions>
                                 <condition id="-5" name="Compare width" sid="361258146409743" type="enemyHealthbar">
                                     <param id="0" name="Comparison">3</param>
@@ -812,7 +860,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="530654625296785">
+                <event-block disabled="1" sid="530654625296785">
                     <conditions>
                         <condition id="-1" name="Every tick" sid="873588702478401" type="System" />
                     </conditions>
@@ -826,7 +874,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="244415069878560">
+                <event-block disabled="1" sid="244415069878560">
                     <conditions>
                         <condition id="6" name="On object clicked" sid="593633345110610" type="Mouse">
                             <param id="0" name="Mouse button">0</param>
@@ -841,7 +889,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="634201165391526">
+                <event-block disabled="1" sid="634201165391526">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="777101390975816" type="gunBullet">
                             <param id="0" name="Object">enemy</param>
@@ -859,7 +907,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="810183180240815">
+                <event-block disabled="1" sid="810183180240815">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="419463963965977" type="enemy">
                             <param id="0" name="Instance variable">enemyHealth</param>
@@ -1227,25 +1275,6 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="632990920394107">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="417159052172864" type="player">
-                            <param id="0" name="Object">labdoorVis</param>
-                        </condition>
-                        <condition id="3" name="Is button down" sid="988679847604003" type="Gamepad">
-                            <param id="0" name="Gamepad">0</param>
-                            <param id="1" name="Button">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="371945542615289" type="labDoorclosed">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="638846587144967" type="System">
-                            <param id="0" name="Seconds">5.0</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="168728545557168">
                     <conditions>
                         <condition id="6" name="On button pressed" sid="462844207009164" type="Gamepad">
@@ -1264,14 +1293,28 @@
                             <param id="0" name="Comparison">0</param>
                             <param id="1" name="Number">0</param>
                         </condition>
+                        <condition id="-14" name="Compare variable" sid="835986651917665" type="System">
+                            <param id="0" name="Variable">Labco</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
                     </conditions>
                     <actions>
+                        <action id="-15" name="Set visible" sid="865637803758484" type="labDoorclosed">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
                         <action id="5" name="Set frame" sid="120264960538792" type="elevLabtrigger">
                             <param id="0" name="Frame number">1</param>
                         </action>
                         <action id="-10" name="Set value" sid="255848674722368" type="elevaLab">
                             <param id="0" name="Instance variable">elevate</param>
                             <param id="1" name="Value">&quot;down&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="660294384843380" type="System">
+                            <param id="0" name="Seconds">5</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="690709893071937" type="labDoorclosed">
+                            <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1293,6 +1336,11 @@
                             <param id="0" name="Comparison">0</param>
                             <param id="1" name="Number">1</param>
                         </condition>
+                        <condition id="-14" name="Compare variable" sid="206637664527152" type="System">
+                            <param id="0" name="Variable">Labco</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="5" name="Set frame" sid="907135989541225" type="elevLabtrigger">
@@ -1301,25 +1349,6 @@
                         <action id="-10" name="Set value" sid="189973592323398" type="elevaLab">
                             <param id="0" name="Instance variable">elevate</param>
                             <param id="1" name="Value">&quot;up&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="200844785602362">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="576553802622192" type="player">
-                            <param id="0" name="Object">elevLabtrigger</param>
-                        </condition>
-                        <condition id="3" name="Is button down" sid="664709059841711" type="Gamepad">
-                            <param id="0" name="Gamepad">0</param>
-                            <param id="1" name="Button">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-3" name="Create object" sid="927003060007828" type="System">
-                            <param id="0" name="Object to create">labDoorclosed</param>
-                            <param id="1" name="Layer">11</param>
-                            <param id="2" name="X">159.339</param>
-                            <param id="3" name="Y">1099.708</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1339,11 +1368,11 @@
                     </conditions>
                     <actions>
                         <action id="-4" name="Set layer visible" sid="647443863085792" type="System">
-                            <param id="0" name="Layer">8</param>
+                            <param id="0" name="Layer">9</param>
                             <param id="1" name="Visibility">1</param>
                         </action>
                         <action id="-4" name="Set layer visible" sid="147553216779571" type="System">
-                            <param id="0" name="Layer">12</param>
+                            <param id="0" name="Layer">13</param>
                             <param id="1" name="Visibility">0</param>
                         </action>
                         <action behavior="Solid" id="0" name="Set enabled" sid="127696584384583" type="storeWall">
@@ -1351,13 +1380,19 @@
                         </action>
                         <action id="-9" name="Destroy" sid="792835325702141" type="storeTriggerin" />
                         <action id="-16" name="Wait" sid="512402896776408" type="System">
-                            <param id="0" name="Seconds">0.01</param>
+                            <param id="0" name="Seconds">1</param>
                         </action>
                         <action id="-3" name="Create object" sid="878890539686363" type="System">
                             <param id="0" name="Object to create">storeTriggerout</param>
-                            <param id="1" name="Layer">8</param>
+                            <param id="1" name="Layer">9</param>
                             <param id="2" name="X">1353.884</param>
                             <param id="3" name="Y">1142.584</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="794199257032010" type="System">
+                            <param id="0" name="Object to create">LapcoOpen</param>
+                            <param id="1" name="Layer">9</param>
+                            <param id="2" name="X">1234</param>
+                            <param id="3" name="Y">1118</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1373,11 +1408,11 @@
                     </conditions>
                     <actions>
                         <action id="-4" name="Set layer visible" sid="575921936668208" type="System">
-                            <param id="0" name="Layer">8</param>
+                            <param id="0" name="Layer">9</param>
                             <param id="1" name="Visibility">0</param>
                         </action>
                         <action id="-4" name="Set layer visible" sid="642405592368679" type="System">
-                            <param id="0" name="Layer">12</param>
+                            <param id="0" name="Layer">13</param>
                             <param id="1" name="Visibility">1</param>
                         </action>
                         <action behavior="Solid" id="0" name="Set enabled" sid="926014611677372" type="storeWall">
@@ -1385,42 +1420,145 @@
                         </action>
                         <action id="-9" name="Destroy" sid="198311003640087" type="storeTriggerout" />
                         <action id="-16" name="Wait" sid="616862363946726" type="System">
-                            <param id="0" name="Seconds">0.01</param>
+                            <param id="0" name="Seconds">1</param>
                         </action>
                         <action id="-3" name="Create object" sid="734390425459231" type="System">
                             <param id="0" name="Object to create">storeTriggerin</param>
-                            <param id="1" name="Layer">8</param>
+                            <param id="1" name="Layer">9</param>
                             <param id="2" name="X">1353.884</param>
                             <param id="3" name="Y">1142.584</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="115608100874299" type="LapcoOpen" />
+                    </actions>
+                </event-block>
+                <event-block sid="464606749494341">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="792239003301666" type="player">
+                            <param id="0" name="Object">labdoorVis</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="307551814597656" type="entersign">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="563978335018782" type="entersign">
+                            <param id="0" name="Animation">&quot;run&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="136162156740379" type="System">
+                            <param id="0" name="Seconds">3.0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="449613809552250" type="entersign">
+                            <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="464606749494341">
-            <conditions>
-                <condition id="1" name="Is overlapping another object" sid="792239003301666" type="player">
-                    <param id="0" name="Object">elevLabfixed1</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-3" name="Create object" sid="297749359914958" type="System">
-                    <param id="0" name="Object to create">Sprite11</param>
-                    <param id="1" name="Layer">11</param>
-                    <param id="2" name="X">157</param>
-                    <param id="3" name="Y">1033</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="468681957297629">
-            <conditions>
-                <condition id="1" inverted="1" name="Is overlapping another object" sid="613699426456958" type="player">
-                    <param id="0" name="Object">elevLabfixed1</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="793986062705920" type="Sprite11" />
-            </actions>
-        </event-block>
+        <event-group description="" sid="435479375425266" title="HUD">
+            <sub-events>
+                <event-block sid="427479543389268">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="347979590597923" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="406187940267551" type="healthbar2">
+                            <param id="0" name="Width">Self.max_width</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="927831084920581">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="176217094816180" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="875363099095267" type="healthbar2">
+                            <param id="0" name="Width">healthbar2.max_width/player.health_max*player.health_current</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="539569640481176">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="848509763274663" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">minusbutton</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="517473967995381" type="player">
+                            <param id="0" name="Instance variable">health_current</param>
+                            <param id="1" name="Value">15</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="177179479883353">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="638433867042199" type="player">
+                                    <param id="0" name="Instance variable">health_current</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="337876895253175" type="player">
+                                    <param id="0" name="Instance variable">health_current</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="495295207605155" title="Subway">
+            <sub-events>
+                <event-block sid="860810989742008">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="102802683999549" type="System">
+                            <param id="0" name="Interval (seconds)">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="712977570402051" type="System">
+                            <param id="0" name="Object to create">subway</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="X">111</param>
+                            <param id="3" name="Y">1481</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="881999345626142" type="subway">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="427355007919452" type="System">
+                            <param id="0" name="Seconds">7</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="738073572852797" type="subway" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="957785866522527" title="Weed Growth">
+            <sub-events>
+                <event-block sid="503341175896620">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="570582117913912" type="player">
+                            <param id="0" name="Object">weedPackage</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="795321432078591" type="weedPackage" />
+                        <action id="-5" name="Set width" sid="421384669898467" type="weedbar">
+                            <param id="0" name="Width">60</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="227571940976214" type="System">
+                            <param id="0" name="Object to create">weedIcon</param>
+                            <param id="1" name="Layer">16</param>
+                            <param id="2" name="X">441.314</param>
+                            <param id="3" name="Y">18.12</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
