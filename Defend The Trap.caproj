@@ -26,9 +26,11 @@
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Rex.Rainbow" id="Rex_Platform_MoveTo" version="0.100000001">Platform MoveTo</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
@@ -39,8 +41,8 @@
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>480</width>
-        <height>320</height>
+        <width>640</width>
+        <height>360</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
@@ -50,11 +52,11 @@
         <prop name="Enable WebGL">On</prop>
         <prop name="Fullscreen in browser">Letterbox scale</prop>
         <prop name="Fullscreen scaling">High quality</prop>
-        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Loader style">Progress bar only</prop>
         <prop name="Orientations">Landscape</prop>
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
-        <prop name="Preview browser">Chrome</prop>
+        <prop name="Preview browser">NW.js</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -728,18 +730,35 @@
             <instance-variables>
                 <instance-variable name="direction" sid="938876455616358" type="number" />
                 <instance-variable name="enemyHealth" sid="674898695173135" type="number" />
+                <instance-variable name="wepType" sid="821722562666834" type="string" />
+                <instance-variable name="isShoot" sid="687450232728909" type="number" />
+                <instance-variable name="canshoot" sid="182628841757372" type="string" />
+                <instance-variable name="wepRate" sid="637975983921103" type="number" />
+                <instance-variable name="edirection" sid="693379922059816" type="string" />
+                <instance-variable name="esight" sid="810177490657999" type="string" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Platform" sid="314861269307619">
                     <behavior id="Platform" />
                 </behavior-type>
-                <behavior-type name="DestroyOutsideLayout" sid="231768075071219">
-                    <behavior id="destroy" />
+                <behavior-type name="LineOfSight" sid="107934287911828">
+                    <behavior id="LOS" />
+                </behavior-type>
+                <behavior-type name="PlatformMoveTo" sid="453944324003916">
+                    <behavior id="Rex_Platform_MoveTo" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="507003332902922">
+                    <behavior id="solid" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="927466394610392" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+                <animation framecount="1" loop="0" name="shoot" pingpong="0" repeatcount="1" repeatto="0" sid="897435183771661" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="1.016" y="0.34" />
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -775,6 +794,10 @@
             <instance-variables>
                 <instance-variable name="direction" sid="945620975239765" type="number" />
                 <instance-variable name="npcHealth" sid="555551791890322" type="number" />
+                <instance-variable name="edirection" sid="386311316206444" type="string" />
+                <instance-variable name="esight" sid="593278965402150" type="string" />
+                <instance-variable name="wepRate" sid="886065167619280" type="number" />
+                <instance-variable name="canshoot" sid="389488106747522" type="string" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Platform" sid="193064692190612">
@@ -782,6 +805,15 @@
                 </behavior-type>
                 <behavior-type name="DestroyOutsideLayout" sid="550271959926659">
                     <behavior id="destroy" />
+                </behavior-type>
+                <behavior-type name="LineOfSight" sid="720690915961972">
+                    <behavior id="LOS" />
+                </behavior-type>
+                <behavior-type name="PlatformMoveTo" sid="193662090442661">
+                    <behavior id="Rex_Platform_MoveTo" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="964344509901766">
+                    <behavior id="solid" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
@@ -1311,6 +1343,72 @@
             <animation-folder>
                 <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="946466459640718" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite12" sid="199017451553107">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="774292358854787" speed="5">
+                    <frame duration="1" hotspotX="0.571429" hotspotY="0.571429" original-source="C:\Users\Gerrell\Desktop\Defend the trap\New folder\Animations\gold_coin\Default\000.png" />
+                    <frame duration="1" hotspotX="0.571429" hotspotY="0.571429" original-source="C:\Users\Gerrell\Desktop\Defend the trap\New folder\Animations\gold_coin\Default\001.png" />
+                    <frame duration="1" hotspotX="0.571429" hotspotY="0.571429" original-source="C:\Users\Gerrell\Desktop\Defend the trap\New folder\Animations\gold_coin\Default\002.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite14" sid="795101579950308">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="869456159401378" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite16" sid="332561958838895">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="270127626299335" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Gerrell\Desktop\Defend the trap\gud_buttons.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btnLeft" sid="798157921556864">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="676412855592391" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btnRight" sid="543941659955706">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="508441621729232" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btnAction" sid="695203562309283">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="645615461531293" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btnFire" sid="123949919994627">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="681434632622994" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btnServe" sid="684331065979593">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="303309930026631" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>

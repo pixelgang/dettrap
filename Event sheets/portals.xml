@@ -4,7 +4,7 @@
     <name>portals</name>
     <events>
         <event-group description="" sid="127434824868845" title="Lab Portal" />
-        <event-block sid="490947044194708">
+        <event-block disabled="1" sid="490947044194708">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="422763938308928" type="player">
                     <param id="0" name="Object">portal_labdoor</param>
