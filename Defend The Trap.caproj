@@ -2,7 +2,7 @@
 <c2project>
     <name>Defend The Trap</name>
     <description>Defend the Turf.</description>
-    <version>1.0</version>
+    <version>2.0</version>
     <author>Pixel Gang Studios</author>
     <author-email>support@pixelgangstudios.com</author-email>
     <author-website>http://www.pixelgangstudios.com</author-website>
@@ -17,6 +17,7 @@
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Scirra" id="XboxLive" version="1">Xbox Live</plugin>
@@ -33,6 +34,7 @@
         <behavior author="Rex.Rainbow" id="Rex_Platform_MoveTo" version="0.100000001">Platform MoveTo</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+        <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -291,34 +293,46 @@
                 <animation framecount="4" loop="1" name="walk" pingpong="0" repeatcount="1" repeatto="0" sid="694233560452988" speed="8">
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Gerrell\Desktop\Pixel Apps\Defend the Trap\Project\Animations\player\walk\000.png">
                         <collision-poly>
-                            <point x="0.412109" y="0.302734" />
-                            <point x="0.669922" y="0.251953" />
-                            <point x="0.746094" y="1" />
-                            <point x="0.279297" y="0.998047" />
+                            <point x="0.382813" y="0.300781" />
+                            <point x="0.679688" y="0.304688" />
+                            <point x="0.667969" y="0.980469" />
+                            <point x="0.511719" y="0.988281" />
+                            <point x="0.375" y="0.984375" />
+                            <point x="0.375" y="0.625" />
+                            <point x="0.40625" y="0.5" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Gerrell\Desktop\Pixel Apps\Defend the Trap\Project\Animations\player\walk\001.png">
                         <collision-poly>
-                            <point x="0.332031" y="0.236328" />
-                            <point x="0.712891" y="0.285156" />
-                            <point x="0.681641" y="0.996094" />
-                            <point x="0.34375" y="1" />
+                            <point x="0.382813" y="0.300781" />
+                            <point x="0.679688" y="0.304688" />
+                            <point x="0.667969" y="0.980469" />
+                            <point x="0.511719" y="0.988281" />
+                            <point x="0.375" y="0.984375" />
+                            <point x="0.375" y="0.625" />
+                            <point x="0.40625" y="0.5" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Gerrell\Desktop\Pixel Apps\Defend the Trap\Project\Animations\player\walk\002.png">
                         <collision-poly>
-                            <point x="0.289063" y="0" />
-                            <point x="0.724609" y="0" />
-                            <point x="0.740234" y="0.998047" />
-                            <point x="0.322266" y="1" />
+                            <point x="0.382813" y="0.300781" />
+                            <point x="0.679688" y="0.304688" />
+                            <point x="0.667969" y="0.980469" />
+                            <point x="0.511719" y="0.988281" />
+                            <point x="0.375" y="0.984375" />
+                            <point x="0.375" y="0.625" />
+                            <point x="0.40625" y="0.5" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Gerrell\Desktop\Pixel Apps\Defend the Trap\Project\Animations\player\walk\003.png">
                         <collision-poly>
-                            <point x="0.378906" y="0.285156" />
-                            <point x="0.697266" y="0.263672" />
-                            <point x="0.703125" y="0.990234" />
-                            <point x="0.330078" y="1" />
+                            <point x="0.382813" y="0.300781" />
+                            <point x="0.679688" y="0.304688" />
+                            <point x="0.667969" y="0.980469" />
+                            <point x="0.511719" y="0.988281" />
+                            <point x="0.375" y="0.984375" />
+                            <point x="0.375" y="0.625" />
+                            <point x="0.40625" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -485,7 +499,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite3" sid="353171239785858">
+        <object-type name="trees" sid="353171239785858">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="128324551398607" speed="5">
@@ -1365,7 +1379,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite16" sid="332561958838895">
+        <object-type name="mobilekeys" sid="332561958838895">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="270127626299335" speed="5">
@@ -1409,6 +1423,121 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="303309930026631" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite17" sid="396269545336543">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="732760224360985" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="gtgtg" sid="902478619566623">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\Gerrell\Desktop\Defend the trap\fonts sprite\Textures\Full_Color.png" />
+        </object-type>
+        <object-type name="fontSales" sid="885399755156938">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\Gerrell\Desktop\Defend the trap\fonts sprite\Textures\Full_Color.png" />
+        </object-type>
+        <object-type name="Sprite16" sid="101385640273378">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="709013340569923" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="fontWeedsales1" sid="832288281880787">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="apartment" sid="793868347688533">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="880218057873899" speed="5">
+                    <frame duration="1" hotspotX="0.508278" hotspotY="0.50237" original-source="C:\Users\Gerrell\Desktop\Defend the trap\apartment\apartment_inside.png">
+                        <collision-poly>
+                            <point x="0.00165016" y="0.0031348" />
+                            <point x="0.99835" y="0.0172414" />
+                            <point x="0.986799" y="1" />
+                            <point x="0.506601" y="0.998433" />
+                            <point x="0.0165017" y="0.990596" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="apartWall" sid="340834204872107">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="447434685259980">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="754245833378129" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="elevatAparttriger" sid="800713965847277">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="844502428168975" speed="5">
+                    <frame duration="1" hotspotX="0.164" hotspotY="0.192" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="elevaApartment" sid="123536207615665">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="elevatea" sid="930742924058963" type="string" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Solid" sid="504416670035599">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="479768387876349" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0">
+                        <image-point name="Imagepoint 1" x="0.5" y="0" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="elevaApartfixed" sid="655095738338080">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="elevate_apart" sid="798483789114109" type="string" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Jumpthru" sid="470610389961578">
+                    <behavior id="jumpthru" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="395512313922522" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="apartWalltrigger" sid="798448411550765">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="151315720393621" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite18" sid="177369312772301">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="336484141334981" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>

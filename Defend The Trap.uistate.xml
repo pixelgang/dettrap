@@ -10,8 +10,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="1">main</layout>
-        <event-sheet order="0">mainSheet</event-sheet>
+        <layout active="1" order="0">main</layout>
+        <event-sheet order="1">mainSheet</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -52,7 +52,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/storeTriggerout/" />
         <folder expanded="1" path="animation-folder/Sprite2/" />
         <folder expanded="1" path="animation-folder/portal_labdoor/" />
-        <folder expanded="1" path="animation-folder/Sprite3/" />
+        <folder expanded="1" path="animation-folder/trees/" />
         <folder expanded="1" path="animation-folder/screenFade/" />
         <folder expanded="1" path="animation-folder/weedout/" />
         <folder expanded="1" path="animation-folder/screenFadein/" />
@@ -105,11 +105,20 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/labcoDoorlock/" />
         <folder expanded="1" path="animation-folder/Sprite12/" />
         <folder expanded="1" path="animation-folder/Sprite14/" />
-        <folder expanded="1" path="animation-folder/Sprite16/" />
+        <folder expanded="1" path="animation-folder/mobilekeys/" />
         <folder expanded="1" path="animation-folder/btnLeft/" />
         <folder expanded="1" path="animation-folder/btnRight/" />
         <folder expanded="1" path="animation-folder/btnAction/" />
         <folder expanded="1" path="animation-folder/btnFire/" />
         <folder expanded="1" path="animation-folder/btnServe/" />
+        <folder expanded="1" path="animation-folder/Sprite17/" />
+        <folder expanded="1" path="animation-folder/Sprite16/" />
+        <folder expanded="1" path="animation-folder/apartment/" />
+        <folder expanded="1" path="animation-folder/apartWall/" />
+        <folder expanded="1" path="animation-folder/elevatAparttriger/" />
+        <folder expanded="1" path="animation-folder/elevaApartment/" />
+        <folder expanded="1" path="animation-folder/elevaApartfixed/" />
+        <folder expanded="1" path="animation-folder/apartWalltrigger/" />
+        <folder expanded="1" path="animation-folder/Sprite18/" />
     </folders-expanded>
 </c2uistate>
