@@ -85071,10 +85071,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>3301.359863281</x>
-                        <y>640.091430664</y>
+                        <y>647.181274414</y>
                         <z>0</z>
                         <width>18.876220703</width>
-                        <height>523.346496582</height>
+                        <height>516.256652832</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -85263,7 +85263,7 @@
                         <elevate_apart>fixed</elevate_apart>
                     </instance-variables>
                     <behavior-instances>
-                        <behavior-instance type="Jumpthru">
+                        <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Enabled</initial-state>
                             </properties>
@@ -85295,7 +85295,7 @@
                         <elevate_apart>fixed</elevate_apart>
                     </instance-variables>
                     <behavior-instances>
-                        <behavior-instance type="Jumpthru">
+                        <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Enabled</initial-state>
                             </properties>
@@ -85403,28 +85403,6 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="apartWalltrigger" uid="3933">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>2825.423339844</x>
-                        <y>1110.56652832</y>
-                        <z>0</z>
-                        <width>45.016601563</width>
-                        <height>64.210083008</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>0.5</opacity>
-                    </world>
-                </instance>
                 <instance type="apartWall" uid="3934">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -85522,11 +85500,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>3545.042480469</x>
-                        <y>640.129333496</y>
+                        <x>3538.432128906</x>
+                        <y>642.089477539</y>
                         <z>0</z>
-                        <width>480.267822266</width>
-                        <height>11.076965332</height>
+                        <width>493.48828125</width>
+                        <height>9.117004395</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -85551,11 +85529,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>3784.735595703</x>
-                        <y>621.192626953</y>
+                        <x>3779.057128906</x>
+                        <y>626.973876953</y>
                         <z>0</z>
-                        <width>61.275920868</width>
-                        <height>5.833251953</height>
+                        <width>73.774734497</width>
+                        <height>25.884878159</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -85605,7 +85583,7 @@
                                 <acceleration>700</acceleration>
                                 <deceleration>1500</deceleration>
                                 <jump-strength>0</jump-strength>
-                                <gravity>1500</gravity>
+                                <gravity>10</gravity>
                                 <max-fall-speed>1000</max-fall-speed>
                                 <double-jump>Disabled</double-jump>
                                 <jump-sustain>0</jump-sustain>
@@ -86602,6 +86580,28 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
+                <instance type="apartWalltrigger" uid="3933">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2829.249511719</x>
+                        <y>1110.872070313</y>
+                        <z>0</z>
+                        <width>52.668701172</width>
+                        <height>64.821533203</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.5</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -87265,6 +87265,28 @@
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="restart" uid="3939">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>593</x>
+                        <y>111</y>
+                        <z>0</z>
+                        <width>60</width>
+                        <height>70</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
